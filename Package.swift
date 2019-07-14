@@ -21,6 +21,7 @@ let package = Package(
         .target(
             name: "LanguageCode",
             dependencies: []),
+        .target(name: "Generator"),
         .testTarget(
             name: "LanguageCodeTests",
             dependencies: ["LanguageCode"]),
