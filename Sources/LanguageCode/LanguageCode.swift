@@ -1,4 +1,4 @@
-public enum LanguageCode {
+public enum LanguageCode: String, CaseIterable {
     case Afar
     case Abkhazian
     case Achinese
