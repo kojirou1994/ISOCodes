@@ -296,7 +296,6 @@ public enum LanguageCode: String, CaseIterable {
     case Vietnamese
     case Volapük
     case Votic
-    case Walamo
     case Waray
     case Washo
     case Welsh
@@ -314,7 +313,7 @@ public enum LanguageCode: String, CaseIterable {
     
     public init?(iso639_2: String) {
         switch iso639_2 {
-        case "aar":                 self = .Afar
+        case "﻿aar":                self = .Afar
         case "abk":                 self = .Abkhazian
         case "ace":                 self = .Achinese
         case "ach":                 self = .Acoli
@@ -611,7 +610,6 @@ public enum LanguageCode: String, CaseIterable {
         case "vie":                 self = .Vietnamese
         case "vol":                 self = .Volapük
         case "vot":                 self = .Votic
-        case "wal":                 self = .Walamo
         case "war":                 self = .Waray
         case "was":                 self = .Washo
         case "wel":                 self = .Welsh
@@ -632,7 +630,7 @@ public enum LanguageCode: String, CaseIterable {
     
     public var iso639_2: String {
         switch self {
-        case .Afar:                 return "aar"
+        case .Afar:                 return "﻿aar"
         case .Abkhazian:            return "abk"
         case .Achinese:             return "ace"
         case .Acoli:                return "ach"
@@ -929,7 +927,6 @@ public enum LanguageCode: String, CaseIterable {
         case .Vietnamese:           return "vie"
         case .Volapük:              return "vol"
         case .Votic:                return "vot"
-        case .Walamo:               return "wal"
         case .Waray:                return "war"
         case .Washo:                return "was"
         case .Welsh:                return "wel"
@@ -951,316 +948,315 @@ public enum LanguageCode: String, CaseIterable {
         switch self {
         case .Afar:                 return "aa"
         case .Abkhazian:            return "ab"
-        case .Achinese:             return "nil"
-        case .Acoli:                return "nil"
-        case .Adangme:              return "nil"
-        case .Afrihili:             return "nil"
+        case .Achinese:             return nil
+        case .Acoli:                return nil
+        case .Adangme:              return nil
+        case .Afrihili:             return nil
         case .Afrikaans:            return "af"
-        case .Ainu:                 return "nil"
+        case .Ainu:                 return nil
         case .Akan:                 return "ak"
-        case .Akkadian:             return "nil"
+        case .Akkadian:             return nil
         case .Albanian:             return "sq"
-        case .Aleut:                return "nil"
+        case .Aleut:                return nil
         case .Amharic:              return "am"
-        case .Angika:               return "nil"
+        case .Angika:               return nil
         case .Arabic:               return "ar"
         case .Aragonese:            return "an"
         case .Armenian:             return "hy"
-        case .Arapaho:              return "nil"
-        case .Arawak:               return "nil"
+        case .Arapaho:              return nil
+        case .Arawak:               return nil
         case .Assamese:             return "as"
         case .Avaric:               return "av"
         case .Avestan:              return "ae"
-        case .Awadhi:               return "nil"
+        case .Awadhi:               return nil
         case .Aymara:               return "ay"
         case .Azerbaijani:          return "az"
         case .Bashkir:              return "ba"
-        case .Baluchi:              return "nil"
+        case .Baluchi:              return nil
         case .Bambara:              return "bm"
-        case .Balinese:             return "nil"
+        case .Balinese:             return nil
         case .Basque:               return "eu"
-        case .Basa:                 return "nil"
+        case .Basa:                 return nil
         case .Belarusian:           return "be"
-        case .Bemba:                return "nil"
+        case .Bemba:                return nil
         case .Bengali:              return "bn"
-        case .Bhojpuri:             return "nil"
-        case .Bikol:                return "nil"
+        case .Bhojpuri:             return nil
+        case .Bikol:                return nil
         case .Bislama:              return "bi"
-        case .Siksika:              return "nil"
+        case .Siksika:              return nil
         case .Bosnian:              return "bs"
-        case .Braj:                 return "nil"
+        case .Braj:                 return nil
         case .Breton:               return "br"
-        case .Buriat:               return "nil"
-        case .Buginese:             return "nil"
+        case .Buriat:               return nil
+        case .Buginese:             return nil
         case .Bulgarian:            return "bg"
         case .Burmese:              return "my"
-        case .Caddo:                return "nil"
-        case .Cebuano:              return "nil"
+        case .Caddo:                return nil
+        case .Cebuano:              return nil
         case .Chamorro:             return "ch"
-        case .Chibcha:              return "nil"
+        case .Chibcha:              return nil
         case .Chechen:              return "ce"
-        case .Chagatai:             return "nil"
+        case .Chagatai:             return nil
         case .Chinese:              return "zh"
-        case .Chuukese:             return "nil"
-        case .Mari:                 return "nil"
-        case .Choctaw:              return "nil"
-        case .Cherokee:             return "nil"
+        case .Chuukese:             return nil
+        case .Mari:                 return nil
+        case .Choctaw:              return nil
+        case .Cherokee:             return nil
         case .Chuvash:              return "cv"
-        case .Cheyenne:             return "nil"
-        case .Montenegrin:          return "nil"
-        case .Coptic:               return "nil"
+        case .Cheyenne:             return nil
+        case .Montenegrin:          return nil
+        case .Coptic:               return nil
         case .Cornish:              return "kw"
         case .Corsican:             return "co"
         case .Cree:                 return "cr"
-        case .Kashubian:            return "nil"
+        case .Kashubian:            return nil
         case .Czech:                return "cs"
-        case .Dakota:               return "nil"
+        case .Dakota:               return nil
         case .Danish:               return "da"
-        case .Dargwa:               return "nil"
-        case .Delaware:             return "nil"
-        case .Dogrib:               return "nil"
-        case .Dinka:                return "nil"
-        case .Dogri:                return "nil"
-        case .Duala:                return "nil"
-        case .Dyula:                return "nil"
+        case .Dargwa:               return nil
+        case .Delaware:             return nil
+        case .Dogrib:               return nil
+        case .Dinka:                return nil
+        case .Dogri:                return nil
+        case .Duala:                return nil
+        case .Dyula:                return nil
         case .Dzongkha:             return "dz"
-        case .Efik:                 return "nil"
-        case .Ekajuk:               return "nil"
-        case .Elamite:              return "nil"
+        case .Efik:                 return nil
+        case .Ekajuk:               return nil
+        case .Elamite:              return nil
         case .English:              return "en"
         case .Esperanto:            return "eo"
         case .Estonian:             return "et"
         case .Ewe:                  return "ee"
-        case .Ewondo:               return "nil"
-        case .Fang:                 return "nil"
+        case .Ewondo:               return nil
+        case .Fang:                 return nil
         case .Faroese:              return "fo"
-        case .Fanti:                return "nil"
+        case .Fanti:                return nil
         case .Fijian:               return "fj"
         case .Finnish:              return "fi"
-        case .Fon:                  return "nil"
+        case .Fon:                  return nil
         case .French:               return "fr"
         case .Fulah:                return "ff"
-        case .Friulian:             return "nil"
-        case .Ga:                   return "nil"
-        case .Gayo:                 return "nil"
-        case .Gbaya:                return "nil"
+        case .Friulian:             return nil
+        case .Ga:                   return nil
+        case .Gayo:                 return nil
+        case .Gbaya:                return nil
         case .Georgian:             return "ka"
         case .German:               return "de"
-        case .Geez:                 return "nil"
-        case .Gilbertese:           return "nil"
+        case .Geez:                 return nil
+        case .Gilbertese:           return nil
         case .Irish:                return "ga"
         case .Galician:             return "gl"
         case .Manx:                 return "gv"
-        case .Gondi:                return "nil"
-        case .Gorontalo:            return "nil"
-        case .Gothic:               return "nil"
-        case .Grebo:                return "nil"
+        case .Gondi:                return nil
+        case .Gorontalo:            return nil
+        case .Gothic:               return nil
+        case .Grebo:                return nil
         case .Guarani:              return "gn"
         case .Gujarati:             return "gu"
-        case .Haida:                return "nil"
+        case .Haida:                return nil
         case .Hausa:                return "ha"
-        case .Hawaiian:             return "nil"
+        case .Hawaiian:             return nil
         case .Hebrew:               return "he"
         case .Herero:               return "hz"
-        case .Hiligaynon:           return "nil"
+        case .Hiligaynon:           return nil
         case .Hindi:                return "hi"
-        case .Hittite:              return "nil"
+        case .Hittite:              return nil
         case .Croatian:             return "hr"
         case .Hungarian:            return "hu"
-        case .Hupa:                 return "nil"
-        case .Iban:                 return "nil"
+        case .Hupa:                 return nil
+        case .Iban:                 return nil
         case .Igbo:                 return "ig"
         case .Icelandic:            return "is"
         case .Ido:                  return "io"
         case .Inuktitut:            return "iu"
-        case .Iloko:                return "nil"
+        case .Iloko:                return nil
         case .Indonesian:           return "id"
-        case .Ingush:               return "nil"
+        case .Ingush:               return nil
         case .Inupiaq:              return "ik"
         case .Italian:              return "it"
         case .Javanese:             return "jv"
-        case .Lojban:               return "nil"
+        case .Lojban:               return nil
         case .Japanese:             return "ja"
-        case .Kabyle:               return "nil"
-        case .Kamba:                return "nil"
+        case .Kabyle:               return nil
+        case .Kamba:                return nil
         case .Kannada:              return "kn"
         case .Kashmiri:             return "ks"
         case .Kanuri:               return "kr"
-        case .Kawi:                 return "nil"
+        case .Kawi:                 return nil
         case .Kazakh:               return "kk"
-        case .Kabardian:            return "nil"
-        case .Khasi:                return "nil"
+        case .Kabardian:            return nil
+        case .Khasi:                return nil
         case .Kinyarwanda:          return "rw"
-        case .Kimbundu:             return "nil"
-        case .Konkani:              return "nil"
+        case .Kimbundu:             return nil
+        case .Konkani:              return nil
         case .Komi:                 return "kv"
         case .Kongo:                return "kg"
         case .Korean:               return "ko"
-        case .Kosraean:             return "nil"
-        case .Kpelle:               return "nil"
-        case .Karelian:             return "nil"
-        case .Kurukh:               return "nil"
-        case .Kumyk:                return "nil"
+        case .Kosraean:             return nil
+        case .Kpelle:               return nil
+        case .Karelian:             return nil
+        case .Kurukh:               return nil
+        case .Kumyk:                return nil
         case .Kurdish:              return "ku"
-        case .Kutenai:              return "nil"
-        case .Ladino:               return "nil"
-        case .Lahnda:               return "nil"
-        case .Lamba:                return "nil"
+        case .Kutenai:              return nil
+        case .Ladino:               return nil
+        case .Lahnda:               return nil
+        case .Lamba:                return nil
         case .Lao:                  return "lo"
         case .Latin:                return "la"
         case .Latvian:              return "lv"
-        case .Lezghian:             return "nil"
+        case .Lezghian:             return nil
         case .Lingala:              return "ln"
         case .Lithuanian:           return "lt"
-        case .Mongo:                return "nil"
-        case .Lozi:                 return "nil"
+        case .Mongo:                return nil
+        case .Lozi:                 return nil
         case .Ganda:                return "lg"
-        case .Luiseno:              return "nil"
-        case .Lunda:                return "nil"
-        case .Lushai:               return "nil"
+        case .Luiseno:              return nil
+        case .Lunda:                return nil
+        case .Lushai:               return nil
         case .Macedonian:           return "mk"
-        case .Madurese:             return "nil"
-        case .Magahi:               return "nil"
+        case .Madurese:             return nil
+        case .Magahi:               return nil
         case .Marshallese:          return "mh"
-        case .Maithili:             return "nil"
-        case .Makasar:              return "nil"
+        case .Maithili:             return nil
+        case .Makasar:              return nil
         case .Malayalam:            return "ml"
-        case .Mandingo:             return "nil"
+        case .Mandingo:             return nil
         case .Maori:                return "mi"
         case .Marathi:              return "mr"
-        case .Masai:                return "nil"
+        case .Masai:                return nil
         case .Malay:                return "ms"
-        case .Moksha:               return "nil"
-        case .Mandar:               return "nil"
-        case .Mende:                return "nil"
-        case .Minangkabau:          return "nil"
+        case .Moksha:               return nil
+        case .Mandar:               return nil
+        case .Mende:                return nil
+        case .Minangkabau:          return nil
         case .Malagasy:             return "mg"
         case .Maltese:              return "mt"
-        case .Manchu:               return "nil"
-        case .Manipuri:             return "nil"
-        case .Mohawk:               return "nil"
+        case .Manchu:               return nil
+        case .Manipuri:             return nil
+        case .Mohawk:               return nil
         case .Mongolian:            return "mn"
-        case .Mossi:                return "nil"
-        case .Creek:                return "nil"
-        case .Mirandese:            return "nil"
-        case .Marwari:              return "nil"
-        case .Erzya:                return "nil"
-        case .Neapolitan:           return "nil"
+        case .Mossi:                return nil
+        case .Creek:                return nil
+        case .Mirandese:            return nil
+        case .Marwari:              return nil
+        case .Erzya:                return nil
+        case .Neapolitan:           return nil
         case .Nauru:                return "na"
         case .Ndonga:               return "ng"
         case .Nepali:               return "ne"
-        case .Nias:                 return "nil"
-        case .Niuean:               return "nil"
-        case .Nogai:                return "nil"
+        case .Nias:                 return nil
+        case .Niuean:               return nil
+        case .Nogai:                return nil
         case .Norwegian:            return "no"
-        case .Nyamwezi:             return "nil"
-        case .Nyankole:             return "nil"
-        case .Nyoro:                return "nil"
-        case .Nzima:                return "nil"
+        case .Nyamwezi:             return nil
+        case .Nyankole:             return nil
+        case .Nyoro:                return nil
+        case .Nzima:                return nil
         case .Ojibwa:               return "oj"
         case .Oriya:                return "or"
         case .Oromo:                return "om"
-        case .Osage:                return "nil"
-        case .Pangasinan:           return "nil"
-        case .Pahlavi:              return "nil"
-        case .Papiamento:           return "nil"
-        case .Palauan:              return "nil"
+        case .Osage:                return nil
+        case .Pangasinan:           return nil
+        case .Pahlavi:              return nil
+        case .Papiamento:           return nil
+        case .Palauan:              return nil
         case .Persian:              return "fa"
-        case .Phoenician:           return "nil"
+        case .Phoenician:           return nil
         case .Pali:                 return "pi"
         case .Polish:               return "pl"
-        case .Pohnpeian:            return "nil"
+        case .Pohnpeian:            return nil
         case .Portuguese:           return "pt"
         case .Quechua:              return "qu"
-        case .Rajasthani:           return "nil"
-        case .Rapanui:              return "nil"
+        case .Rajasthani:           return nil
+        case .Rapanui:              return nil
         case .Romansh:              return "rm"
-        case .Romany:               return "nil"
+        case .Romany:               return nil
         case .Rundi:                return "rn"
         case .Russian:              return "ru"
-        case .Sandawe:              return "nil"
+        case .Sandawe:              return nil
         case .Sango:                return "sg"
-        case .Yakut:                return "nil"
+        case .Yakut:                return nil
         case .Sanskrit:             return "sa"
-        case .Sasak:                return "nil"
-        case .Santali:              return "nil"
-        case .Sicilian:             return "nil"
-        case .Scots:                return "nil"
-        case .Selkup:               return "nil"
-        case .Shan:                 return "nil"
-        case .Sidamo:               return "nil"
+        case .Sasak:                return nil
+        case .Santali:              return nil
+        case .Sicilian:             return nil
+        case .Scots:                return nil
+        case .Selkup:               return nil
+        case .Shan:                 return nil
+        case .Sidamo:               return nil
         case .Slovak:               return "sk"
         case .Slovenian:            return "sl"
         case .Samoan:               return "sm"
         case .Shona:                return "sn"
         case .Sindhi:               return "sd"
-        case .Soninke:              return "nil"
-        case .Sogdian:              return "nil"
+        case .Soninke:              return nil
+        case .Sogdian:              return nil
         case .Somali:               return "so"
         case .Sardinian:            return "sc"
         case .Serbian:              return "sr"
-        case .Serer:                return "nil"
+        case .Serer:                return nil
         case .Swati:                return "ss"
-        case .Sukuma:               return "nil"
+        case .Sukuma:               return nil
         case .Sundanese:            return "su"
-        case .Susu:                 return "nil"
-        case .Sumerian:             return "nil"
+        case .Susu:                 return nil
+        case .Sumerian:             return nil
         case .Swahili:              return "sw"
         case .Swedish:              return "sv"
-        case .Syriac:               return "nil"
+        case .Syriac:               return nil
         case .Tahitian:             return "ty"
         case .Tamil:                return "ta"
         case .Tatar:                return "tt"
         case .Telugu:               return "te"
-        case .Timne:                return "nil"
-        case .Tereno:               return "nil"
-        case .Tetum:                return "nil"
+        case .Timne:                return nil
+        case .Tereno:               return nil
+        case .Tetum:                return nil
         case .Tajik:                return "tg"
         case .Tagalog:              return "tl"
         case .Thai:                 return "th"
         case .Tibetan:              return "bo"
-        case .Tigre:                return "nil"
+        case .Tigre:                return nil
         case .Tigrinya:             return "ti"
-        case .Tiv:                  return "nil"
-        case .Tokelau:              return "nil"
-        case .Tlingit:              return "nil"
-        case .Tamashek:             return "nil"
-        case .Tsimshian:            return "nil"
+        case .Tiv:                  return nil
+        case .Tokelau:              return nil
+        case .Tlingit:              return nil
+        case .Tamashek:             return nil
+        case .Tsimshian:            return nil
         case .Tswana:               return "tn"
         case .Tsonga:               return "ts"
         case .Turkmen:              return "tk"
-        case .Tumbuka:              return "nil"
+        case .Tumbuka:              return nil
         case .Turkish:              return "tr"
-        case .Tuvalu:               return "nil"
+        case .Tuvalu:               return nil
         case .Twi:                  return "tw"
-        case .Tuvinian:             return "nil"
-        case .Udmurt:               return "nil"
-        case .Ugaritic:             return "nil"
+        case .Tuvinian:             return nil
+        case .Udmurt:               return nil
+        case .Ugaritic:             return nil
         case .Ukrainian:            return "uk"
-        case .Umbundu:              return "nil"
-        case .Undetermined:         return "nil"
+        case .Umbundu:              return nil
+        case .Undetermined:         return nil
         case .Urdu:                 return "ur"
         case .Uzbek:                return "uz"
-        case .Vai:                  return "nil"
+        case .Vai:                  return nil
         case .Venda:                return "ve"
         case .Vietnamese:           return "vi"
         case .Volapük:              return "vo"
-        case .Votic:                return "nil"
-        case .Walamo:               return "nil"
-        case .Waray:                return "nil"
-        case .Washo:                return "nil"
+        case .Votic:                return nil
+        case .Waray:                return nil
+        case .Washo:                return nil
         case .Welsh:                return "cy"
         case .Walloon:              return "wa"
         case .Wolof:                return "wo"
         case .Xhosa:                return "xh"
-        case .Yao:                  return "nil"
-        case .Yapese:               return "nil"
+        case .Yao:                  return nil
+        case .Yapese:               return nil
         case .Yiddish:              return "yi"
         case .Yoruba:               return "yo"
-        case .Zapotec:              return "nil"
-        case .Zenaga:               return "nil"
+        case .Zapotec:              return nil
+        case .Zenaga:               return nil
         case .Zulu:                 return "zu"
-        case .Zuni:                 return "nil"
+        case .Zuni:                 return nil
         }
     }
 }
