@@ -3,5 +3,5 @@ import XCTest
 import LanguageCodeTests
 
 var tests = [XCTestCaseEntry]()
-tests += LanguageCodeTests.allTests()
+tests += ISOCodesTests.allTests()
 XCTMain(tests)
