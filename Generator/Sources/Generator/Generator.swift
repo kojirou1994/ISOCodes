@@ -2,7 +2,7 @@ import Dispatch
 import Foundation
 import Kanna
 
-struct CountryData: Comparable {
+struct CountryData: Comparable, CodeGenerateData {
     static func < (lhs: CountryData, rhs: CountryData) -> Bool {
         lhs.alpha3 < rhs.alpha3
     }
@@ -17,7 +17,7 @@ struct CountryData: Comparable {
     }
 }
 
-struct CurrencyCountryData: Hashable, Comparable {
+struct CurrencyCountryData: Hashable, Comparable, CodeGenerateData {
     let country: String
     let currency: String
     let code: String
@@ -40,7 +40,7 @@ struct CurrencyCountryData: Hashable, Comparable {
     }
 }
 
-struct LanguageData: Comparable {
+struct LanguageData: Comparable, CodeGenerateData {
     let alpha3Bibliographic: String
     let alpha3Terminologic: String?
     let alpha2Code: String?
@@ -72,6 +72,7 @@ func generateCountryCode() {
             return CountryData(name: columns[0], alpha2: columns[1],
                                alpha3: columns[2], code: columns[3])
         }.sorted()
+        generateUtility()
         generateCode(countries)
         generateCurrencyCode(countries: countries)
         generateLanguageCode()
@@ -117,6 +118,9 @@ func generateLanguageCode() {
                                      alpha2Code: parts[2], englishName: parts[3]!,
                                      frenchName: parts[4]!)
 
+            if lang.alpha3Bibliographic.count != 3 {
+                return nil
+            }
 //            if lang.englishName.contains(where: { invalidCharacters.contains($0) }) {
 //                return nil
 //            }
@@ -129,6 +133,8 @@ func generateLanguageCode() {
     }.resume()
 }
 
+
+// MARK: Country
 private func generateCode(_ data: [CountryData]) {
     let outputURL = outputRootDirectory.appendingPathComponent("Country.swift")
 
@@ -141,49 +147,22 @@ private func generateCode(_ data: [CountryData]) {
         public var id: Self {self}
         public var numericCode: UInt16 { rawValue }
 
-    public init?(alpha2Code: String) {
-    guard alpha2Code.utf8.count == 2 else {
-    return nil
-    }
-    switch alpha2Code.lowercased() {
-    \(data.map { "case \"\($0.alpha2.lowercased())\": self = .\($0.caseString)" }.joined(separator: "\n"))
-    default: return nil
-    }
-    }
+    \(generateInitFromCode(parameterName: "alpha2Code", codeCount: 2, lowercased: false, data: data, codes: {[$0.alpha2]}))
 
-    public init?(alpha3Code: String) {
-    guard alpha3Code.utf8.count == 3 else {
-    return nil
-    }
-    switch alpha3Code.lowercased() {
-    \(data.map { "case \"\($0.alpha3.lowercased())\": self = .\($0.caseString)" }.joined(separator: "\n"))
-    default: return nil
-    }
-    }
+    \(generateInitFromCode(parameterName: "alpha3Code", codeCount: 3, lowercased: false, data: data, codes: {[$0.alpha3]}))
 
-        public var name: String {
-        switch self {
-    \(data.map { "case .\($0.caseString): return \"\($0.name)\"" }.joined(separator: "\n"))
-        }
-        }
+    \(generateVariable(name: "name", data: data, isString: true, isOptional: false, value: {$0.name}))
 
-        public var alpha2Code: String {
-        switch self {
-        \(data.map { "case .\($0.caseString): return \"\($0.alpha2)\"" }.joined(separator: "\n"))
-        }
-        }
+    \(generateVariable(name: "alpha2Code", data: data, isString: true, isOptional: false, value: {$0.alpha2}))
 
-        public var alpha3Code: String {
-        switch self {
-        \(data.map { "case .\($0.caseString): return \"\($0.alpha3)\"" }.joined(separator: "\n"))
-        }
-        }
+    \(generateVariable(name: "alpha3Code", data: data, isString: true, isOptional: false, value: {$0.alpha3}))
     }
     """
     try! code.write(to: outputURL, atomically: true, encoding: .utf8)
     formatFile(at: outputURL)
 }
 
+// MARK: Currency
 private func generateCode(_ data: [CurrencyCountryData]) {
     let outputURL = outputRootDirectory.appendingPathComponent("Currency.swift")
 
@@ -193,30 +172,14 @@ private func generateCode(_ data: [CurrencyCountryData]) {
 
     \(data.map { "case \($0.caseString) = \($0.number)" }.joined(separator: "\n"))
 
-    public init?(code: String) {
-    guard code.utf8.count == 3 else {
-    return nil
-    }
-    switch code.uppercased() {
-    \(data.map { "case \"\($0.code.uppercased())\": self = .\($0.caseString)" }.joined(separator: "\n"))
-    default: return nil
-    }
-    }
+    \(generateInitFromCode(parameterName: "code", codeCount: 3, lowercased: false, data: data, codes: {[$0.code]}))
 
     public var id: Self {self}
     public var numericCode: UInt16 { rawValue }
 
-    public var name: String {
-    switch self {
-    \(data.map { "case .\($0.caseString): return \"\($0.currency)\"" }.joined(separator: "\n"))
-    }
-    }
+    \(generateVariable(name: "name", data: data, isString: true, isOptional: false, value: {$0.currency}))
 
-    public var code: String {
-    switch self {
-    \(data.map { "case .\($0.caseString): return \"\($0.code)\"" }.joined(separator: "\n"))
-    }
-    }
+    \(generateVariable(name: "code", data: data, isString: true, isOptional: false, value: {$0.code}))
 
     }
     """
@@ -224,65 +187,41 @@ private func generateCode(_ data: [CurrencyCountryData]) {
     formatFile(at: outputURL)
 }
 
-
+// MARK: Language
 private func generateCode(_ languages: [LanguageData]) {
     let outputURL = outputRootDirectory.appendingPathComponent("Language.swift")
 
     print("Writing to \(outputURL.path)")
     let code = """
-    public enum Language: String, Identifiable, CaseIterable, Codable {
+    public enum Language: UInt32, Identifiable, CaseIterable, Codable {
 
-    \(languages.map { "case \($0.caseString)" + ($0.needExplictRawValue ? " = \"\($0.alpha3Bibliographic)\"" : "") }.joined(separator: "\n"))
+    \(languages.map { "case \($0.caseString)" + " = " + convertAlphaCodeToHexString($0.caseString) }.joined(separator: "\n"))
 
-    public init?(alpha2Code: String) {
-    guard alpha2Code.utf8.count == 2 else {
-    return nil
-    }
-    switch alpha2Code.lowercased() {
-    \(languages.filter{$0.alpha2Code != nil}.map{ "case \"\($0.alpha2Code!)\": self = .\($0.caseString)" }.joined(separator: "\n"))
-    default: return nil
-    }
-    }
+    \(generateInitFromCode(parameterName: "alpha2Code", codeCount: 2, lowercased: true, data: languages.filter{$0.alpha2Code != nil}, codes: {[$0.alpha2Code!]}))
 
-    public init?(alpha3Code: String) {
-    guard alpha3Code.utf8.count == 3 else {
-    return nil
-    }
-    switch alpha3Code.lowercased() {
-    \(languages.map{ "case \([$0.alpha3Bibliographic, $0.alpha3Terminologic].compactMap{$0}.map{"\"\($0)\""}.joined(separator: ", ")): self = .\($0.caseString)" }.joined(separator: "\n"))
-    default: return nil
-    }
-    }
+    \(generateInitFromCode(parameterName: "alpha3Code", codeCount: 3, lowercased: true, data: languages, codes: {[$0.alpha3Bibliographic, $0.alpha3Terminologic]}))
 
     public var id: Self {self}
 
-    public var name: String {
-    switch self {
-    \(languages.map { "case .\($0.caseString): return \"\($0.englishName)\"" }.joined(separator: "\n"))
-    }
-    }
+    \(generateVariable(name: "name", data: languages, isString: true, isOptional: false, value: {$0.englishName}))
 
-    public var alpha2Code: String? {
-    switch self {
-    \(languages.filter{$0.alpha2Code != nil}.map { "case .\($0.caseString): return \"\($0.alpha2Code!)\"" }.joined(separator: "\n"))
-    default: return nil
-    }
-    }
+    \(generateVariable(name: "alpha2Code", data: languages.filter{$0.alpha2Code != nil}, isString: true, isOptional: true, value: {$0.alpha2Code!}))
 
-    public var alpha3BibliographicCode: String {
-    rawValue
-    }
+    \(generateVariable(name: "alpha3BibliographicCode", data: languages, isString: true, isOptional: false, value: {$0.alpha3Bibliographic}))
 
-    public var alpha3TerminologicCode: String {
-    switch self {
-    \(languages.filter{$0.alpha3Terminologic != nil}.map { "case .\($0.caseString): return \"\($0.alpha3Terminologic!)\"" }.joined(separator: "\n"))
-    default: return alpha3BibliographicCode
-    }
-    }
+    \(generateVariable(name: "alpha3TerminologicCode", data: languages, isString: true, isOptional: false, value: {$0.alpha3Terminologic ?? $0.alpha3Bibliographic}))
 
     }
     """
     try! code.write(to: outputURL, atomically: true, encoding: .utf8)
+    formatFile(at: outputURL)
+}
+
+private func generateUtility() {
+    let outputURL = outputRootDirectory.appendingPathComponent("Utlity.swift")
+
+    print("Writing to \(outputURL.path)")
+    try! utilityCode.write(to: outputURL, atomically: true, encoding: .utf8)
     formatFile(at: outputURL)
 }
 /*
@@ -306,3 +245,40 @@ private func generateCountryExtension(country: [CountryData], currency: [Currenc
     formatFile(at: outputURL)
 }
 */
+
+private func generateCase<T: CodeGenerateData>(data: T, lowercased: Bool, codes: (T) -> [String?]) -> String {
+    codes(data)
+        .compactMap{$0}
+        .map { lowercased ? $0.lowercased() : $0.uppercased()}
+        .map{convertAlphaCodeToHexString($0)}
+        .joined(separator: ", ")
+}
+
+private func generateInitFromCode<C>(parameterName: String, codeCount: Int, lowercased: Bool, data: C, codes: (C.Element) -> [String?]) -> String where C: Collection, C.Element: CodeGenerateData {
+    precondition((2...3).contains(codeCount))
+
+    let valueType = codeCount == 2 ? "UInt16" : "UInt32"
+    return """
+    public init?(\(parameterName): String) {
+    guard \(parameterName).utf8.count == \(codeCount) else {
+    return nil
+    }
+    switch \(parameterName).\(lowercased ? "lowercased" : "uppercased")().utf8.joined(\(valueType).self) {
+    \(data.map { "case \(generateCase(data: $0, lowercased: lowercased, codes: codes)): self = .\($0.caseString)" }.joined(separator: "\n"))
+    default: return nil
+    }
+    }
+    """
+}
+
+private func generateVariable<C, T>(name: String, data: C, isString: Bool, isOptional: Bool, value: (C.Element) -> T) -> String
+    where C: Collection, C.Element: CodeGenerateData {
+    """
+public var \(name): \(String(describing: T.self))\(isOptional ? "?" : "") {
+switch self {
+\(data.map { "case .\($0.caseString): return \(isString ? "\"\(value($0))\"" : "\(value($0))")" }.joined(separator: "\n"))
+\(isOptional ? "default: return nil" : "")
+}
+}
+"""
+}

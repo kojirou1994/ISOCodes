@@ -20,6 +20,15 @@
         }
       },
       {
+        "package": "Kwift",
+        "repositoryURL": "https://github.com/kojirou1994/Kwift.git",
+        "state": {
+          "branch": null,
+          "revision": "9b4e76a4fa594b555bd033555ec4273957a893b7",
+          "version": "0.5.4"
+        }
+      },
+      {
         "package": "swift-tools-support-core",
         "repositoryURL": "https://github.com/apple/swift-tools-support-core.git",
         "state": {

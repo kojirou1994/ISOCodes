@@ -1,4 +1,48 @@
 /// ISO 3166
+import KwiftUtility
+
+let utilityCode =
+"""
+ extension Sequence where Element == UInt8 {
+@usableFromInline
+func joined<T>(_ type: T.Type) -> T where T : FixedWidthInteger {
+ let byteCount = T.bitWidth / 8
+ var result = T.init()
+ for element in enumerated() {
+ if element.offset == byteCount {
+ break
+ }
+ result = (result << 8) | T(truncatingIfNeeded: element.element)
+ }
+ return result
+ }
+ }
+"""
+
+protocol CodeGenerateData {
+    var caseString: String {get}
+}
+/*
+ public init?(alpha2Code: String) {
+ guard alpha2Code.utf8.count == 2 else {
+ return nil
+ }
+ switch alpha2Code.lowercased().utf8.joined(UInt16.self) {
+ \(data.map { "case \(convertAlphaCodeToHexString($0.alpha2.lowercased())): self = .\($0.caseString)" }.joined(separator: "\n"))
+ default: return nil
+ }
+ }
+
+ public init?(alpha3Code: String) {
+ guard alpha3Code.utf8.count == 3 else {
+ return nil
+ }
+ switch alpha3Code.lowercased().utf8.joined(UInt32.self) {
+ \(data.map { "case \(convertAlphaCodeToHexString($0.alpha3.lowercased())): self = .\($0.caseString)" }.joined(separator: "\n"))
+ default: return nil
+ }
+ }
+ */
 
 public enum Country: UInt16, Identifiable, CaseIterable, Codable {
     case chi = 010
@@ -8,8 +52,8 @@ public enum Country: UInt16, Identifiable, CaseIterable, Codable {
         guard alpha2Code.utf8.count == 2 else {
             return nil
         }
-        switch alpha2Code.lowercased() {
-        case "ch": self = .chi
+        switch alpha2Code.lowercased().utf8.joined(UInt16.self) {
+        case 0x1111: self = .chi
         default: return nil
         }
     }
@@ -18,8 +62,8 @@ public enum Country: UInt16, Identifiable, CaseIterable, Codable {
         guard alpha3Code.utf8.count == 3 else {
             return nil
         }
-        switch alpha3Code.lowercased() {
-        case "chi": self = .chi
+        switch alpha3Code.lowercased().utf8.joined(UInt32.self) {
+//        case "chi": self = .chi
         default: return nil
         }
     }
@@ -79,33 +123,13 @@ public enum Currency: UInt16, Identifiable, CaseIterable, Codable {
 }
 
 /// ISO 639
-public enum Language: String, Identifiable, CaseIterable, Codable {
-    case chi
+public enum Language: UInt32, Identifiable, CaseIterable, Codable {
+    case chi = 0x111111
 
     public var id: Self {self}
 
     public var name: String {
         ""
-    }
-
-    public init?(alpha2Code: String) {
-        guard alpha2Code.utf8.count == 2 else {
-            return nil
-        }
-        switch alpha2Code.lowercased() {
-        case "ch": self = .chi
-        default: return nil
-        }
-    }
-
-    public init?(alpha3Code: String) {
-        guard alpha3Code.utf8.count == 3 else {
-            return nil
-        }
-        switch alpha3Code.lowercased() {
-        case "chi", "zho": self = .chi
-        default: return nil
-        }
     }
 
     public var alpha2Code: String? {
@@ -119,4 +143,8 @@ public enum Language: String, Identifiable, CaseIterable, Codable {
     public var alpha3TerminologicCode: String {
         "AAA"
     }
+}
+
+func convertAlphaCodeToHexString(_ str: String) -> String {
+    str.utf8.hexString(uppercase: false, prefix: "0x")
 }
