@@ -170,10 +170,10 @@ public enum Currency: UInt16, Identifiable, CaseIterable, Codable {
   case ZWL = 932
 
   public init?(code: String) {
-    guard code.utf8.count == 3 else {
+    guard let asciiUIntCode = code.threeCharToUInt32 else {
       return nil
     }
-    switch code.uppercased().utf8.joined(UInt32.self) {
+    switch asciiUIntCode {
     case 0x414544: self = .AED
     case 0x41464e: self = .AFN
     case 0x414c4c: self = .ALL

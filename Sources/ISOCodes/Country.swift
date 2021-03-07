@@ -254,10 +254,10 @@ public enum Country: UInt16, Identifiable, CaseIterable, Codable {
   public var numericCode: UInt16 { rawValue }
 
   public init?(alpha2Code: String) {
-    guard alpha2Code.utf8.count == 2 else {
+    guard let asciiUIntCode = alpha2Code.twoCharToUInt16 else {
       return nil
     }
-    switch alpha2Code.uppercased().utf8.joined(UInt16.self) {
+    switch asciiUIntCode {
     case 0x4157: self = .abw
     case 0x4146: self = .afg
     case 0x414f: self = .ago
@@ -512,10 +512,10 @@ public enum Country: UInt16, Identifiable, CaseIterable, Codable {
   }
 
   public init?(alpha3Code: String) {
-    guard alpha3Code.utf8.count == 3 else {
+    guard let asciiUIntCode = alpha3Code.threeCharToUInt32 else {
       return nil
     }
-    switch alpha3Code.uppercased().utf8.joined(UInt32.self) {
+    switch asciiUIntCode {
     case 0x414257: self = .abw
     case 0x414647: self = .afg
     case 0x41474f: self = .ago
@@ -765,6 +765,264 @@ public enum Country: UInt16, Identifiable, CaseIterable, Codable {
     case 0x5a4146: self = .zaf
     case 0x5a4d42: self = .zmb
     case 0x5a5745: self = .zwe
+    default: return nil
+    }
+  }
+
+  public init?(string: String) {
+    guard let asciiUIntCode = string.twoOrThreeCharToUInt32 else {
+      return nil
+    }
+    switch asciiUIntCode {
+    case 0x4157, 0x414257: self = .abw
+    case 0x4146, 0x414647: self = .afg
+    case 0x414f, 0x41474f: self = .ago
+    case 0x4149, 0x414941: self = .aia
+    case 0x4158, 0x414c41: self = .ala
+    case 0x414c, 0x414c42: self = .alb
+    case 0x4144, 0x414e44: self = .and
+    case 0x4145, 0x415245: self = .are
+    case 0x4152, 0x415247: self = .arg
+    case 0x414d, 0x41524d: self = .arm
+    case 0x4153, 0x41534d: self = .asm
+    case 0x4151, 0x415441: self = .ata
+    case 0x5446, 0x415446: self = .atf
+    case 0x4147, 0x415447: self = .atg
+    case 0x4155, 0x415553: self = .aus
+    case 0x4154, 0x415554: self = .aut
+    case 0x415a, 0x415a45: self = .aze
+    case 0x4249, 0x424449: self = .bdi
+    case 0x4245, 0x42454c: self = .bel
+    case 0x424a, 0x42454e: self = .ben
+    case 0x4251, 0x424553: self = .bes
+    case 0x4246, 0x424641: self = .bfa
+    case 0x4244, 0x424744: self = .bgd
+    case 0x4247, 0x424752: self = .bgr
+    case 0x4248, 0x424852: self = .bhr
+    case 0x4253, 0x424853: self = .bhs
+    case 0x4241, 0x424948: self = .bih
+    case 0x424c, 0x424c4d: self = .blm
+    case 0x4259, 0x424c52: self = .blr
+    case 0x425a, 0x424c5a: self = .blz
+    case 0x424d, 0x424d55: self = .bmu
+    case 0x424f, 0x424f4c: self = .bol
+    case 0x4252, 0x425241: self = .bra
+    case 0x4242, 0x425242: self = .brb
+    case 0x424e, 0x42524e: self = .brn
+    case 0x4254, 0x42544e: self = .btn
+    case 0x4256, 0x425654: self = .bvt
+    case 0x4257, 0x425741: self = .bwa
+    case 0x4346, 0x434146: self = .caf
+    case 0x4341, 0x43414e: self = .can
+    case 0x4343, 0x43434b: self = .cck
+    case 0x4348, 0x434845: self = .che
+    case 0x434c, 0x43484c: self = .chl
+    case 0x434e, 0x43484e: self = .chn
+    case 0x4349, 0x434956: self = .civ
+    case 0x434d, 0x434d52: self = .cmr
+    case 0x4344, 0x434f44: self = .cod
+    case 0x4347, 0x434f47: self = .cog
+    case 0x434b, 0x434f4b: self = .cok
+    case 0x434f, 0x434f4c: self = .col
+    case 0x4b4d, 0x434f4d: self = .com
+    case 0x4356, 0x435056: self = .cpv
+    case 0x4352, 0x435249: self = .cri
+    case 0x4355, 0x435542: self = .cub
+    case 0x4357, 0x435557: self = .cuw
+    case 0x4358, 0x435852: self = .cxr
+    case 0x4b59, 0x43594d: self = .cym
+    case 0x4359, 0x435950: self = .cyp
+    case 0x435a, 0x435a45: self = .cze
+    case 0x4445, 0x444555: self = .deu
+    case 0x444a, 0x444a49: self = .dji
+    case 0x444d, 0x444d41: self = .dma
+    case 0x444b, 0x444e4b: self = .dnk
+    case 0x444f, 0x444f4d: self = .dom
+    case 0x445a, 0x445a41: self = .dza
+    case 0x4543, 0x454355: self = .ecu
+    case 0x4547, 0x454759: self = .egy
+    case 0x4552, 0x455249: self = .eri
+    case 0x4548, 0x455348: self = .esh
+    case 0x4553, 0x455350: self = .esp
+    case 0x4545, 0x455354: self = .est
+    case 0x4554, 0x455448: self = .eth
+    case 0x4649, 0x46494e: self = .fin
+    case 0x464a, 0x464a49: self = .fji
+    case 0x464b, 0x464c4b: self = .flk
+    case 0x4652, 0x465241: self = .fra
+    case 0x464f, 0x46524f: self = .fro
+    case 0x464d, 0x46534d: self = .fsm
+    case 0x4741, 0x474142: self = .gab
+    case 0x4742, 0x474252: self = .gbr
+    case 0x4745, 0x47454f: self = .geo
+    case 0x4747, 0x474759: self = .ggy
+    case 0x4748, 0x474841: self = .gha
+    case 0x4749, 0x474942: self = .gib
+    case 0x474e, 0x47494e: self = .gin
+    case 0x4750, 0x474c50: self = .glp
+    case 0x474d, 0x474d42: self = .gmb
+    case 0x4757, 0x474e42: self = .gnb
+    case 0x4751, 0x474e51: self = .gnq
+    case 0x4752, 0x475243: self = .grc
+    case 0x4744, 0x475244: self = .grd
+    case 0x474c, 0x47524c: self = .grl
+    case 0x4754, 0x47544d: self = .gtm
+    case 0x4746, 0x475546: self = .guf
+    case 0x4755, 0x47554d: self = .gum
+    case 0x4759, 0x475559: self = .guy
+    case 0x484b, 0x484b47: self = .hkg
+    case 0x484d, 0x484d44: self = .hmd
+    case 0x484e, 0x484e44: self = .hnd
+    case 0x4852, 0x485256: self = .hrv
+    case 0x4854, 0x485449: self = .hti
+    case 0x4855, 0x48554e: self = .hun
+    case 0x4944, 0x49444e: self = .idn
+    case 0x494d, 0x494d4e: self = .imn
+    case 0x494e, 0x494e44: self = .ind
+    case 0x494f, 0x494f54: self = .iot
+    case 0x4945, 0x49524c: self = .irl
+    case 0x4952, 0x49524e: self = .irn
+    case 0x4951, 0x495251: self = .irq
+    case 0x4953, 0x49534c: self = .isl
+    case 0x494c, 0x495352: self = .isr
+    case 0x4954, 0x495441: self = .ita
+    case 0x4a4d, 0x4a414d: self = .jam
+    case 0x4a45, 0x4a4559: self = .jey
+    case 0x4a4f, 0x4a4f52: self = .jor
+    case 0x4a50, 0x4a504e: self = .jpn
+    case 0x4b5a, 0x4b415a: self = .kaz
+    case 0x4b45, 0x4b454e: self = .ken
+    case 0x4b47, 0x4b475a: self = .kgz
+    case 0x4b48, 0x4b484d: self = .khm
+    case 0x4b49, 0x4b4952: self = .kir
+    case 0x4b4e, 0x4b4e41: self = .kna
+    case 0x4b52, 0x4b4f52: self = .kor
+    case 0x4b57, 0x4b5754: self = .kwt
+    case 0x4c41, 0x4c414f: self = .lao
+    case 0x4c42, 0x4c424e: self = .lbn
+    case 0x4c52, 0x4c4252: self = .lbr
+    case 0x4c59, 0x4c4259: self = .lby
+    case 0x4c43, 0x4c4341: self = .lca
+    case 0x4c49, 0x4c4945: self = .lie
+    case 0x4c4b, 0x4c4b41: self = .lka
+    case 0x4c53, 0x4c534f: self = .lso
+    case 0x4c54, 0x4c5455: self = .ltu
+    case 0x4c55, 0x4c5558: self = .lux
+    case 0x4c56, 0x4c5641: self = .lva
+    case 0x4d4f, 0x4d4143: self = .mac
+    case 0x4d46, 0x4d4146: self = .maf
+    case 0x4d41, 0x4d4152: self = .mar
+    case 0x4d43, 0x4d434f: self = .mco
+    case 0x4d44, 0x4d4441: self = .mda
+    case 0x4d47, 0x4d4447: self = .mdg
+    case 0x4d56, 0x4d4456: self = .mdv
+    case 0x4d58, 0x4d4558: self = .mex
+    case 0x4d48, 0x4d484c: self = .mhl
+    case 0x4d4b, 0x4d4b44: self = .mkd
+    case 0x4d4c, 0x4d4c49: self = .mli
+    case 0x4d54, 0x4d4c54: self = .mlt
+    case 0x4d4d, 0x4d4d52: self = .mmr
+    case 0x4d45, 0x4d4e45: self = .mne
+    case 0x4d4e, 0x4d4e47: self = .mng
+    case 0x4d50, 0x4d4e50: self = .mnp
+    case 0x4d5a, 0x4d4f5a: self = .moz
+    case 0x4d52, 0x4d5254: self = .mrt
+    case 0x4d53, 0x4d5352: self = .msr
+    case 0x4d51, 0x4d5451: self = .mtq
+    case 0x4d55, 0x4d5553: self = .mus
+    case 0x4d57, 0x4d5749: self = .mwi
+    case 0x4d59, 0x4d5953: self = .mys
+    case 0x5954, 0x4d5954: self = .myt
+    case 0x4e41, 0x4e414d: self = .nam
+    case 0x4e43, 0x4e434c: self = .ncl
+    case 0x4e45, 0x4e4552: self = .ner
+    case 0x4e46, 0x4e464b: self = .nfk
+    case 0x4e47, 0x4e4741: self = .nga
+    case 0x4e49, 0x4e4943: self = .nic
+    case 0x4e55, 0x4e4955: self = .niu
+    case 0x4e4c, 0x4e4c44: self = .nld
+    case 0x4e4f, 0x4e4f52: self = .nor
+    case 0x4e50, 0x4e504c: self = .npl
+    case 0x4e52, 0x4e5255: self = .nru
+    case 0x4e5a, 0x4e5a4c: self = .nzl
+    case 0x4f4d, 0x4f4d4e: self = .omn
+    case 0x504b, 0x50414b: self = .pak
+    case 0x5041, 0x50414e: self = .pan
+    case 0x504e, 0x50434e: self = .pcn
+    case 0x5045, 0x504552: self = .per
+    case 0x5048, 0x50484c: self = .phl
+    case 0x5057, 0x504c57: self = .plw
+    case 0x5047, 0x504e47: self = .png
+    case 0x504c, 0x504f4c: self = .pol
+    case 0x5052, 0x505249: self = .pri
+    case 0x4b50, 0x50524b: self = .prk
+    case 0x5054, 0x505254: self = .prt
+    case 0x5059, 0x505259: self = .pry
+    case 0x5053, 0x505345: self = .pse
+    case 0x5046, 0x505946: self = .pyf
+    case 0x5141, 0x514154: self = .qat
+    case 0x5245, 0x524555: self = .reu
+    case 0x524f, 0x524f55: self = .rou
+    case 0x5255, 0x525553: self = .rus
+    case 0x5257, 0x525741: self = .rwa
+    case 0x5341, 0x534155: self = .sau
+    case 0x5344, 0x53444e: self = .sdn
+    case 0x534e, 0x53454e: self = .sen
+    case 0x5347, 0x534750: self = .sgp
+    case 0x4753, 0x534753: self = .sgs
+    case 0x5348, 0x53484e: self = .shn
+    case 0x534a, 0x534a4d: self = .sjm
+    case 0x5342, 0x534c42: self = .slb
+    case 0x534c, 0x534c45: self = .sle
+    case 0x5356, 0x534c56: self = .slv
+    case 0x534d, 0x534d52: self = .smr
+    case 0x534f, 0x534f4d: self = .som
+    case 0x504d, 0x53504d: self = .spm
+    case 0x5253, 0x535242: self = .srb
+    case 0x5353, 0x535344: self = .ssd
+    case 0x5354, 0x535450: self = .stp
+    case 0x5352, 0x535552: self = .sur
+    case 0x534b, 0x53564b: self = .svk
+    case 0x5349, 0x53564e: self = .svn
+    case 0x5345, 0x535745: self = .swe
+    case 0x535a, 0x53575a: self = .swz
+    case 0x5358, 0x53584d: self = .sxm
+    case 0x5343, 0x535943: self = .syc
+    case 0x5359, 0x535952: self = .syr
+    case 0x5443, 0x544341: self = .tca
+    case 0x5444, 0x544344: self = .tcd
+    case 0x5447, 0x54474f: self = .tgo
+    case 0x5448, 0x544841: self = .tha
+    case 0x544a, 0x544a4b: self = .tjk
+    case 0x544b, 0x544b4c: self = .tkl
+    case 0x544d, 0x544b4d: self = .tkm
+    case 0x544c, 0x544c53: self = .tls
+    case 0x544f, 0x544f4e: self = .ton
+    case 0x5454, 0x54544f: self = .tto
+    case 0x544e, 0x54554e: self = .tun
+    case 0x5452, 0x545552: self = .tur
+    case 0x5456, 0x545556: self = .tuv
+    case 0x5457, 0x54574e: self = .twn
+    case 0x545a, 0x545a41: self = .tza
+    case 0x5547, 0x554741: self = .uga
+    case 0x5541, 0x554b52: self = .ukr
+    case 0x554d, 0x554d49: self = .umi
+    case 0x5559, 0x555259: self = .ury
+    case 0x5553, 0x555341: self = .usa
+    case 0x555a, 0x555a42: self = .uzb
+    case 0x5641, 0x564154: self = .vat
+    case 0x5643, 0x564354: self = .vct
+    case 0x5645, 0x56454e: self = .ven
+    case 0x5647, 0x564742: self = .vgb
+    case 0x5649, 0x564952: self = .vir
+    case 0x564e, 0x564e4d: self = .vnm
+    case 0x5655, 0x565554: self = .vut
+    case 0x5746, 0x574c46: self = .wlf
+    case 0x5753, 0x57534d: self = .wsm
+    case 0x5945, 0x59454d: self = .yem
+    case 0x5a41, 0x5a4146: self = .zaf
+    case 0x5a4d, 0x5a4d42: self = .zmb
+    case 0x5a57, 0x5a5745: self = .zwe
     default: return nil
     }
   }
