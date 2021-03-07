@@ -36,7 +36,13 @@ struct CurrencyCountryData: Hashable, Comparable, CodeGenerateData {
     }
 
     var caseString: String {
-        code.uppercased()
+      let str = code.lowercased()
+      switch str {
+      case "try":
+        return "`try`"
+      default:
+        return str
+      }
     }
 }
 
@@ -72,7 +78,6 @@ func generateCountryCode() {
             return CountryData(name: columns[0], alpha2: columns[1],
                                alpha3: columns[2], code: columns[3])
         }.sorted()
-        generateUtility()
         generateCode(countries)
         generateCurrencyCode(countries: countries)
         generateLanguageCode()
@@ -147,15 +152,17 @@ private func generateCode(_ data: [CountryData]) {
         public var id: Self {self}
         public var numericCode: UInt16 { rawValue }
 
-    \(generateInitFromCode(parameterName: "alpha2Code", codeCount: 2, lowercased: false, data: data, codes: {[$0.alpha2]}))
+    \(generateInitFromCode(parameterName: "alpha2Code", charToCodeProperty: .only2, data: data, codes: {[$0.alpha2]}))
 
-    \(generateInitFromCode(parameterName: "alpha3Code", codeCount: 3, lowercased: false, data: data, codes: {[$0.alpha3]}))
+    \(generateInitFromCode(parameterName: "alpha3Code", charToCodeProperty: .only3, data: data, codes: {[$0.alpha3]}))
+
+    \(generateInitFromCode(parameterName: "string", charToCodeProperty: .both2and3, data: data, codes: {[$0.alpha2, $0.alpha3]}))
 
     \(generateVariable(name: "name", data: data, isString: true, isOptional: false, value: {$0.name}))
 
-    \(generateVariable(name: "alpha2Code", data: data, isString: true, isOptional: false, value: {$0.alpha2}))
+    \(generateVariable(name: "alpha2Code", data: data, isString: true, isOptional: false, value: {$0.alpha2.lowercased()}))
 
-    \(generateVariable(name: "alpha3Code", data: data, isString: true, isOptional: false, value: {$0.alpha3}))
+    \(generateVariable(name: "alpha3Code", data: data, isString: true, isOptional: false, value: {$0.alpha3.lowercased()}))
     }
     """
     try! code.write(to: outputURL, atomically: true, encoding: .utf8)
@@ -172,14 +179,14 @@ private func generateCode(_ data: [CurrencyCountryData]) {
 
     \(data.map { "case \($0.caseString) = \($0.number)" }.joined(separator: "\n"))
 
-    \(generateInitFromCode(parameterName: "code", codeCount: 3, lowercased: false, data: data, codes: {[$0.code]}))
+    \(generateInitFromCode(parameterName: "code", charToCodeProperty: .only3, data: data, codes: {[$0.code]}))
 
     public var id: Self {self}
     public var numericCode: UInt16 { rawValue }
 
     \(generateVariable(name: "name", data: data, isString: true, isOptional: false, value: {$0.currency}))
 
-    \(generateVariable(name: "code", data: data, isString: true, isOptional: false, value: {$0.code}))
+    \(generateVariable(name: "code", data: data, isString: true, isOptional: false, value: {$0.code.lowercased()}))
 
     }
     """
@@ -197,9 +204,11 @@ private func generateCode(_ languages: [LanguageData]) {
 
     \(languages.map { "case \($0.caseString)" + " = " + convertAlphaCodeToHexString($0.caseString) }.joined(separator: "\n"))
 
-    \(generateInitFromCode(parameterName: "alpha2Code", codeCount: 2, lowercased: true, data: languages.filter{$0.alpha2Code != nil}, codes: {[$0.alpha2Code!]}))
+    \(generateInitFromCode(parameterName: "alpha2Code", charToCodeProperty: .only2, data: languages.filter{$0.alpha2Code != nil}, codes: {[$0.alpha2Code!]}))
 
-    \(generateInitFromCode(parameterName: "alpha3Code", codeCount: 3, lowercased: true, data: languages, codes: {[$0.alpha3Bibliographic, $0.alpha3Terminologic]}))
+    \(generateInitFromCode(parameterName: "alpha3Code", charToCodeProperty: .only3, data: languages, codes: {[$0.alpha3Bibliographic, $0.alpha3Terminologic]}))
+
+    \(generateInitFromCode(parameterName: "string", charToCodeProperty: .both2and3, data: languages, codes: {[$0.alpha2Code, $0.alpha3Bibliographic, $0.alpha3Terminologic]}))
 
     public var id: Self {self}
 
@@ -217,13 +226,6 @@ private func generateCode(_ languages: [LanguageData]) {
     formatFile(at: outputURL)
 }
 
-private func generateUtility() {
-    let outputURL = outputRootDirectory.appendingPathComponent("Utlity.swift")
-
-    print("Writing to \(outputURL.path)")
-    try! utilityCode.write(to: outputURL, atomically: true, encoding: .utf8)
-    formatFile(at: outputURL)
-}
 /*
 private func generateCountryExtension(country: [CountryData], currency: [CurrencyCountryData]) {
     let outputURL = outputRootDirectory.appendingPathComponent("Country+Currency.swift")
@@ -254,17 +256,22 @@ private func generateCase<T: CodeGenerateData>(data: T, lowercased: Bool, codes:
         .joined(separator: ", ")
 }
 
-private func generateInitFromCode<C>(parameterName: String, codeCount: Int, lowercased: Bool, data: C, codes: (C.Element) -> [String?]) -> String where C: Collection, C.Element: CodeGenerateData {
-    precondition((2...3).contains(codeCount))
+enum CharToIntCodeProperty: String {
+  case only2 = "twoCharToUInt16"
+  case only3 = "threeCharToUInt32"
+  case both2and3 = "twoOrThreeCharToUInt32"
+}
 
-    let valueType = codeCount == 2 ? "UInt16" : "UInt32"
+private func generateInitFromCode<C>(parameterName: String, charToCodeProperty: CharToIntCodeProperty, data: C, codes: (C.Element) -> [String?]) -> String where C: Collection, C.Element: CodeGenerateData {
+
+    let charToCodeProperty = charToCodeProperty.rawValue
     return """
     public init?(\(parameterName): String) {
-    guard \(parameterName).utf8.count == \(codeCount) else {
+    guard let asciiUIntCode = \(parameterName).\(charToCodeProperty) else {
     return nil
     }
-    switch \(parameterName).\(lowercased ? "lowercased" : "uppercased")().utf8.joined(\(valueType).self) {
-    \(data.map { "case \(generateCase(data: $0, lowercased: lowercased, codes: codes)): self = .\($0.caseString)" }.joined(separator: "\n"))
+    switch asciiUIntCode {
+    \(data.map { "case \(generateCase(data: $0, lowercased: true, codes: codes)): self = .\($0.caseString)" }.joined(separator: "\n"))
     default: return nil
     }
     }
