@@ -258,255 +258,255 @@ public enum Country: UInt16, Identifiable, CaseIterable, Codable {
       return nil
     }
     switch asciiUIntCode {
-    case 0x4157: self = .abw
-    case 0x4146: self = .afg
-    case 0x414f: self = .ago
-    case 0x4149: self = .aia
-    case 0x4158: self = .ala
-    case 0x414c: self = .alb
-    case 0x4144: self = .and
-    case 0x4145: self = .are
-    case 0x4152: self = .arg
-    case 0x414d: self = .arm
-    case 0x4153: self = .asm
-    case 0x4151: self = .ata
-    case 0x5446: self = .atf
-    case 0x4147: self = .atg
-    case 0x4155: self = .aus
-    case 0x4154: self = .aut
-    case 0x415a: self = .aze
-    case 0x4249: self = .bdi
-    case 0x4245: self = .bel
-    case 0x424a: self = .ben
-    case 0x4251: self = .bes
-    case 0x4246: self = .bfa
-    case 0x4244: self = .bgd
-    case 0x4247: self = .bgr
-    case 0x4248: self = .bhr
-    case 0x4253: self = .bhs
-    case 0x4241: self = .bih
-    case 0x424c: self = .blm
-    case 0x4259: self = .blr
-    case 0x425a: self = .blz
-    case 0x424d: self = .bmu
-    case 0x424f: self = .bol
-    case 0x4252: self = .bra
-    case 0x4242: self = .brb
-    case 0x424e: self = .brn
-    case 0x4254: self = .btn
-    case 0x4256: self = .bvt
-    case 0x4257: self = .bwa
-    case 0x4346: self = .caf
-    case 0x4341: self = .can
-    case 0x4343: self = .cck
-    case 0x4348: self = .che
-    case 0x434c: self = .chl
-    case 0x434e: self = .chn
-    case 0x4349: self = .civ
-    case 0x434d: self = .cmr
-    case 0x4344: self = .cod
-    case 0x4347: self = .cog
-    case 0x434b: self = .cok
-    case 0x434f: self = .col
-    case 0x4b4d: self = .com
-    case 0x4356: self = .cpv
-    case 0x4352: self = .cri
-    case 0x4355: self = .cub
-    case 0x4357: self = .cuw
-    case 0x4358: self = .cxr
-    case 0x4b59: self = .cym
-    case 0x4359: self = .cyp
-    case 0x435a: self = .cze
-    case 0x4445: self = .deu
-    case 0x444a: self = .dji
-    case 0x444d: self = .dma
-    case 0x444b: self = .dnk
-    case 0x444f: self = .dom
-    case 0x445a: self = .dza
-    case 0x4543: self = .ecu
-    case 0x4547: self = .egy
-    case 0x4552: self = .eri
-    case 0x4548: self = .esh
-    case 0x4553: self = .esp
-    case 0x4545: self = .est
-    case 0x4554: self = .eth
-    case 0x4649: self = .fin
-    case 0x464a: self = .fji
-    case 0x464b: self = .flk
-    case 0x4652: self = .fra
-    case 0x464f: self = .fro
-    case 0x464d: self = .fsm
-    case 0x4741: self = .gab
-    case 0x4742: self = .gbr
-    case 0x4745: self = .geo
-    case 0x4747: self = .ggy
-    case 0x4748: self = .gha
-    case 0x4749: self = .gib
-    case 0x474e: self = .gin
-    case 0x4750: self = .glp
-    case 0x474d: self = .gmb
-    case 0x4757: self = .gnb
-    case 0x4751: self = .gnq
-    case 0x4752: self = .grc
-    case 0x4744: self = .grd
-    case 0x474c: self = .grl
-    case 0x4754: self = .gtm
-    case 0x4746: self = .guf
-    case 0x4755: self = .gum
-    case 0x4759: self = .guy
-    case 0x484b: self = .hkg
-    case 0x484d: self = .hmd
-    case 0x484e: self = .hnd
-    case 0x4852: self = .hrv
-    case 0x4854: self = .hti
-    case 0x4855: self = .hun
-    case 0x4944: self = .idn
-    case 0x494d: self = .imn
-    case 0x494e: self = .ind
-    case 0x494f: self = .iot
-    case 0x4945: self = .irl
-    case 0x4952: self = .irn
-    case 0x4951: self = .irq
-    case 0x4953: self = .isl
-    case 0x494c: self = .isr
-    case 0x4954: self = .ita
-    case 0x4a4d: self = .jam
-    case 0x4a45: self = .jey
-    case 0x4a4f: self = .jor
-    case 0x4a50: self = .jpn
-    case 0x4b5a: self = .kaz
-    case 0x4b45: self = .ken
-    case 0x4b47: self = .kgz
-    case 0x4b48: self = .khm
-    case 0x4b49: self = .kir
-    case 0x4b4e: self = .kna
-    case 0x4b52: self = .kor
-    case 0x4b57: self = .kwt
-    case 0x4c41: self = .lao
-    case 0x4c42: self = .lbn
-    case 0x4c52: self = .lbr
-    case 0x4c59: self = .lby
-    case 0x4c43: self = .lca
-    case 0x4c49: self = .lie
-    case 0x4c4b: self = .lka
-    case 0x4c53: self = .lso
-    case 0x4c54: self = .ltu
-    case 0x4c55: self = .lux
-    case 0x4c56: self = .lva
-    case 0x4d4f: self = .mac
-    case 0x4d46: self = .maf
-    case 0x4d41: self = .mar
-    case 0x4d43: self = .mco
-    case 0x4d44: self = .mda
-    case 0x4d47: self = .mdg
-    case 0x4d56: self = .mdv
-    case 0x4d58: self = .mex
-    case 0x4d48: self = .mhl
-    case 0x4d4b: self = .mkd
-    case 0x4d4c: self = .mli
-    case 0x4d54: self = .mlt
-    case 0x4d4d: self = .mmr
-    case 0x4d45: self = .mne
-    case 0x4d4e: self = .mng
-    case 0x4d50: self = .mnp
-    case 0x4d5a: self = .moz
-    case 0x4d52: self = .mrt
-    case 0x4d53: self = .msr
-    case 0x4d51: self = .mtq
-    case 0x4d55: self = .mus
-    case 0x4d57: self = .mwi
-    case 0x4d59: self = .mys
-    case 0x5954: self = .myt
-    case 0x4e41: self = .nam
-    case 0x4e43: self = .ncl
-    case 0x4e45: self = .ner
-    case 0x4e46: self = .nfk
-    case 0x4e47: self = .nga
-    case 0x4e49: self = .nic
-    case 0x4e55: self = .niu
-    case 0x4e4c: self = .nld
-    case 0x4e4f: self = .nor
-    case 0x4e50: self = .npl
-    case 0x4e52: self = .nru
-    case 0x4e5a: self = .nzl
-    case 0x4f4d: self = .omn
-    case 0x504b: self = .pak
-    case 0x5041: self = .pan
-    case 0x504e: self = .pcn
-    case 0x5045: self = .per
-    case 0x5048: self = .phl
-    case 0x5057: self = .plw
-    case 0x5047: self = .png
-    case 0x504c: self = .pol
-    case 0x5052: self = .pri
-    case 0x4b50: self = .prk
-    case 0x5054: self = .prt
-    case 0x5059: self = .pry
-    case 0x5053: self = .pse
-    case 0x5046: self = .pyf
-    case 0x5141: self = .qat
-    case 0x5245: self = .reu
-    case 0x524f: self = .rou
-    case 0x5255: self = .rus
-    case 0x5257: self = .rwa
-    case 0x5341: self = .sau
-    case 0x5344: self = .sdn
-    case 0x534e: self = .sen
-    case 0x5347: self = .sgp
-    case 0x4753: self = .sgs
-    case 0x5348: self = .shn
-    case 0x534a: self = .sjm
-    case 0x5342: self = .slb
-    case 0x534c: self = .sle
-    case 0x5356: self = .slv
-    case 0x534d: self = .smr
-    case 0x534f: self = .som
-    case 0x504d: self = .spm
-    case 0x5253: self = .srb
-    case 0x5353: self = .ssd
-    case 0x5354: self = .stp
-    case 0x5352: self = .sur
-    case 0x534b: self = .svk
-    case 0x5349: self = .svn
-    case 0x5345: self = .swe
-    case 0x535a: self = .swz
-    case 0x5358: self = .sxm
-    case 0x5343: self = .syc
-    case 0x5359: self = .syr
-    case 0x5443: self = .tca
-    case 0x5444: self = .tcd
-    case 0x5447: self = .tgo
-    case 0x5448: self = .tha
-    case 0x544a: self = .tjk
-    case 0x544b: self = .tkl
-    case 0x544d: self = .tkm
-    case 0x544c: self = .tls
-    case 0x544f: self = .ton
-    case 0x5454: self = .tto
-    case 0x544e: self = .tun
-    case 0x5452: self = .tur
-    case 0x5456: self = .tuv
-    case 0x5457: self = .twn
-    case 0x545a: self = .tza
-    case 0x5547: self = .uga
-    case 0x5541: self = .ukr
-    case 0x554d: self = .umi
-    case 0x5559: self = .ury
-    case 0x5553: self = .usa
-    case 0x555a: self = .uzb
-    case 0x5641: self = .vat
-    case 0x5643: self = .vct
-    case 0x5645: self = .ven
-    case 0x5647: self = .vgb
-    case 0x5649: self = .vir
-    case 0x564e: self = .vnm
-    case 0x5655: self = .vut
-    case 0x5746: self = .wlf
-    case 0x5753: self = .wsm
-    case 0x5945: self = .yem
-    case 0x5a41: self = .zaf
-    case 0x5a4d: self = .zmb
-    case 0x5a57: self = .zwe
+    case 0x6177: self = .abw
+    case 0x6166: self = .afg
+    case 0x616f: self = .ago
+    case 0x6169: self = .aia
+    case 0x6178: self = .ala
+    case 0x616c: self = .alb
+    case 0x6164: self = .and
+    case 0x6165: self = .are
+    case 0x6172: self = .arg
+    case 0x616d: self = .arm
+    case 0x6173: self = .asm
+    case 0x6171: self = .ata
+    case 0x7466: self = .atf
+    case 0x6167: self = .atg
+    case 0x6175: self = .aus
+    case 0x6174: self = .aut
+    case 0x617a: self = .aze
+    case 0x6269: self = .bdi
+    case 0x6265: self = .bel
+    case 0x626a: self = .ben
+    case 0x6271: self = .bes
+    case 0x6266: self = .bfa
+    case 0x6264: self = .bgd
+    case 0x6267: self = .bgr
+    case 0x6268: self = .bhr
+    case 0x6273: self = .bhs
+    case 0x6261: self = .bih
+    case 0x626c: self = .blm
+    case 0x6279: self = .blr
+    case 0x627a: self = .blz
+    case 0x626d: self = .bmu
+    case 0x626f: self = .bol
+    case 0x6272: self = .bra
+    case 0x6262: self = .brb
+    case 0x626e: self = .brn
+    case 0x6274: self = .btn
+    case 0x6276: self = .bvt
+    case 0x6277: self = .bwa
+    case 0x6366: self = .caf
+    case 0x6361: self = .can
+    case 0x6363: self = .cck
+    case 0x6368: self = .che
+    case 0x636c: self = .chl
+    case 0x636e: self = .chn
+    case 0x6369: self = .civ
+    case 0x636d: self = .cmr
+    case 0x6364: self = .cod
+    case 0x6367: self = .cog
+    case 0x636b: self = .cok
+    case 0x636f: self = .col
+    case 0x6b6d: self = .com
+    case 0x6376: self = .cpv
+    case 0x6372: self = .cri
+    case 0x6375: self = .cub
+    case 0x6377: self = .cuw
+    case 0x6378: self = .cxr
+    case 0x6b79: self = .cym
+    case 0x6379: self = .cyp
+    case 0x637a: self = .cze
+    case 0x6465: self = .deu
+    case 0x646a: self = .dji
+    case 0x646d: self = .dma
+    case 0x646b: self = .dnk
+    case 0x646f: self = .dom
+    case 0x647a: self = .dza
+    case 0x6563: self = .ecu
+    case 0x6567: self = .egy
+    case 0x6572: self = .eri
+    case 0x6568: self = .esh
+    case 0x6573: self = .esp
+    case 0x6565: self = .est
+    case 0x6574: self = .eth
+    case 0x6669: self = .fin
+    case 0x666a: self = .fji
+    case 0x666b: self = .flk
+    case 0x6672: self = .fra
+    case 0x666f: self = .fro
+    case 0x666d: self = .fsm
+    case 0x6761: self = .gab
+    case 0x6762: self = .gbr
+    case 0x6765: self = .geo
+    case 0x6767: self = .ggy
+    case 0x6768: self = .gha
+    case 0x6769: self = .gib
+    case 0x676e: self = .gin
+    case 0x6770: self = .glp
+    case 0x676d: self = .gmb
+    case 0x6777: self = .gnb
+    case 0x6771: self = .gnq
+    case 0x6772: self = .grc
+    case 0x6764: self = .grd
+    case 0x676c: self = .grl
+    case 0x6774: self = .gtm
+    case 0x6766: self = .guf
+    case 0x6775: self = .gum
+    case 0x6779: self = .guy
+    case 0x686b: self = .hkg
+    case 0x686d: self = .hmd
+    case 0x686e: self = .hnd
+    case 0x6872: self = .hrv
+    case 0x6874: self = .hti
+    case 0x6875: self = .hun
+    case 0x6964: self = .idn
+    case 0x696d: self = .imn
+    case 0x696e: self = .ind
+    case 0x696f: self = .iot
+    case 0x6965: self = .irl
+    case 0x6972: self = .irn
+    case 0x6971: self = .irq
+    case 0x6973: self = .isl
+    case 0x696c: self = .isr
+    case 0x6974: self = .ita
+    case 0x6a6d: self = .jam
+    case 0x6a65: self = .jey
+    case 0x6a6f: self = .jor
+    case 0x6a70: self = .jpn
+    case 0x6b7a: self = .kaz
+    case 0x6b65: self = .ken
+    case 0x6b67: self = .kgz
+    case 0x6b68: self = .khm
+    case 0x6b69: self = .kir
+    case 0x6b6e: self = .kna
+    case 0x6b72: self = .kor
+    case 0x6b77: self = .kwt
+    case 0x6c61: self = .lao
+    case 0x6c62: self = .lbn
+    case 0x6c72: self = .lbr
+    case 0x6c79: self = .lby
+    case 0x6c63: self = .lca
+    case 0x6c69: self = .lie
+    case 0x6c6b: self = .lka
+    case 0x6c73: self = .lso
+    case 0x6c74: self = .ltu
+    case 0x6c75: self = .lux
+    case 0x6c76: self = .lva
+    case 0x6d6f: self = .mac
+    case 0x6d66: self = .maf
+    case 0x6d61: self = .mar
+    case 0x6d63: self = .mco
+    case 0x6d64: self = .mda
+    case 0x6d67: self = .mdg
+    case 0x6d76: self = .mdv
+    case 0x6d78: self = .mex
+    case 0x6d68: self = .mhl
+    case 0x6d6b: self = .mkd
+    case 0x6d6c: self = .mli
+    case 0x6d74: self = .mlt
+    case 0x6d6d: self = .mmr
+    case 0x6d65: self = .mne
+    case 0x6d6e: self = .mng
+    case 0x6d70: self = .mnp
+    case 0x6d7a: self = .moz
+    case 0x6d72: self = .mrt
+    case 0x6d73: self = .msr
+    case 0x6d71: self = .mtq
+    case 0x6d75: self = .mus
+    case 0x6d77: self = .mwi
+    case 0x6d79: self = .mys
+    case 0x7974: self = .myt
+    case 0x6e61: self = .nam
+    case 0x6e63: self = .ncl
+    case 0x6e65: self = .ner
+    case 0x6e66: self = .nfk
+    case 0x6e67: self = .nga
+    case 0x6e69: self = .nic
+    case 0x6e75: self = .niu
+    case 0x6e6c: self = .nld
+    case 0x6e6f: self = .nor
+    case 0x6e70: self = .npl
+    case 0x6e72: self = .nru
+    case 0x6e7a: self = .nzl
+    case 0x6f6d: self = .omn
+    case 0x706b: self = .pak
+    case 0x7061: self = .pan
+    case 0x706e: self = .pcn
+    case 0x7065: self = .per
+    case 0x7068: self = .phl
+    case 0x7077: self = .plw
+    case 0x7067: self = .png
+    case 0x706c: self = .pol
+    case 0x7072: self = .pri
+    case 0x6b70: self = .prk
+    case 0x7074: self = .prt
+    case 0x7079: self = .pry
+    case 0x7073: self = .pse
+    case 0x7066: self = .pyf
+    case 0x7161: self = .qat
+    case 0x7265: self = .reu
+    case 0x726f: self = .rou
+    case 0x7275: self = .rus
+    case 0x7277: self = .rwa
+    case 0x7361: self = .sau
+    case 0x7364: self = .sdn
+    case 0x736e: self = .sen
+    case 0x7367: self = .sgp
+    case 0x6773: self = .sgs
+    case 0x7368: self = .shn
+    case 0x736a: self = .sjm
+    case 0x7362: self = .slb
+    case 0x736c: self = .sle
+    case 0x7376: self = .slv
+    case 0x736d: self = .smr
+    case 0x736f: self = .som
+    case 0x706d: self = .spm
+    case 0x7273: self = .srb
+    case 0x7373: self = .ssd
+    case 0x7374: self = .stp
+    case 0x7372: self = .sur
+    case 0x736b: self = .svk
+    case 0x7369: self = .svn
+    case 0x7365: self = .swe
+    case 0x737a: self = .swz
+    case 0x7378: self = .sxm
+    case 0x7363: self = .syc
+    case 0x7379: self = .syr
+    case 0x7463: self = .tca
+    case 0x7464: self = .tcd
+    case 0x7467: self = .tgo
+    case 0x7468: self = .tha
+    case 0x746a: self = .tjk
+    case 0x746b: self = .tkl
+    case 0x746d: self = .tkm
+    case 0x746c: self = .tls
+    case 0x746f: self = .ton
+    case 0x7474: self = .tto
+    case 0x746e: self = .tun
+    case 0x7472: self = .tur
+    case 0x7476: self = .tuv
+    case 0x7477: self = .twn
+    case 0x747a: self = .tza
+    case 0x7567: self = .uga
+    case 0x7561: self = .ukr
+    case 0x756d: self = .umi
+    case 0x7579: self = .ury
+    case 0x7573: self = .usa
+    case 0x757a: self = .uzb
+    case 0x7661: self = .vat
+    case 0x7663: self = .vct
+    case 0x7665: self = .ven
+    case 0x7667: self = .vgb
+    case 0x7669: self = .vir
+    case 0x766e: self = .vnm
+    case 0x7675: self = .vut
+    case 0x7766: self = .wlf
+    case 0x7773: self = .wsm
+    case 0x7965: self = .yem
+    case 0x7a61: self = .zaf
+    case 0x7a6d: self = .zmb
+    case 0x7a77: self = .zwe
     default: return nil
     }
   }
@@ -516,255 +516,255 @@ public enum Country: UInt16, Identifiable, CaseIterable, Codable {
       return nil
     }
     switch asciiUIntCode {
-    case 0x414257: self = .abw
-    case 0x414647: self = .afg
-    case 0x41474f: self = .ago
-    case 0x414941: self = .aia
-    case 0x414c41: self = .ala
-    case 0x414c42: self = .alb
-    case 0x414e44: self = .and
-    case 0x415245: self = .are
-    case 0x415247: self = .arg
-    case 0x41524d: self = .arm
-    case 0x41534d: self = .asm
-    case 0x415441: self = .ata
-    case 0x415446: self = .atf
-    case 0x415447: self = .atg
-    case 0x415553: self = .aus
-    case 0x415554: self = .aut
-    case 0x415a45: self = .aze
-    case 0x424449: self = .bdi
-    case 0x42454c: self = .bel
-    case 0x42454e: self = .ben
-    case 0x424553: self = .bes
-    case 0x424641: self = .bfa
-    case 0x424744: self = .bgd
-    case 0x424752: self = .bgr
-    case 0x424852: self = .bhr
-    case 0x424853: self = .bhs
-    case 0x424948: self = .bih
-    case 0x424c4d: self = .blm
-    case 0x424c52: self = .blr
-    case 0x424c5a: self = .blz
-    case 0x424d55: self = .bmu
-    case 0x424f4c: self = .bol
-    case 0x425241: self = .bra
-    case 0x425242: self = .brb
-    case 0x42524e: self = .brn
-    case 0x42544e: self = .btn
-    case 0x425654: self = .bvt
-    case 0x425741: self = .bwa
-    case 0x434146: self = .caf
-    case 0x43414e: self = .can
-    case 0x43434b: self = .cck
-    case 0x434845: self = .che
-    case 0x43484c: self = .chl
-    case 0x43484e: self = .chn
-    case 0x434956: self = .civ
-    case 0x434d52: self = .cmr
-    case 0x434f44: self = .cod
-    case 0x434f47: self = .cog
-    case 0x434f4b: self = .cok
-    case 0x434f4c: self = .col
-    case 0x434f4d: self = .com
-    case 0x435056: self = .cpv
-    case 0x435249: self = .cri
-    case 0x435542: self = .cub
-    case 0x435557: self = .cuw
-    case 0x435852: self = .cxr
-    case 0x43594d: self = .cym
-    case 0x435950: self = .cyp
-    case 0x435a45: self = .cze
-    case 0x444555: self = .deu
-    case 0x444a49: self = .dji
-    case 0x444d41: self = .dma
-    case 0x444e4b: self = .dnk
-    case 0x444f4d: self = .dom
-    case 0x445a41: self = .dza
-    case 0x454355: self = .ecu
-    case 0x454759: self = .egy
-    case 0x455249: self = .eri
-    case 0x455348: self = .esh
-    case 0x455350: self = .esp
-    case 0x455354: self = .est
-    case 0x455448: self = .eth
-    case 0x46494e: self = .fin
-    case 0x464a49: self = .fji
-    case 0x464c4b: self = .flk
-    case 0x465241: self = .fra
-    case 0x46524f: self = .fro
-    case 0x46534d: self = .fsm
-    case 0x474142: self = .gab
-    case 0x474252: self = .gbr
-    case 0x47454f: self = .geo
-    case 0x474759: self = .ggy
-    case 0x474841: self = .gha
-    case 0x474942: self = .gib
-    case 0x47494e: self = .gin
-    case 0x474c50: self = .glp
-    case 0x474d42: self = .gmb
-    case 0x474e42: self = .gnb
-    case 0x474e51: self = .gnq
-    case 0x475243: self = .grc
-    case 0x475244: self = .grd
-    case 0x47524c: self = .grl
-    case 0x47544d: self = .gtm
-    case 0x475546: self = .guf
-    case 0x47554d: self = .gum
-    case 0x475559: self = .guy
-    case 0x484b47: self = .hkg
-    case 0x484d44: self = .hmd
-    case 0x484e44: self = .hnd
-    case 0x485256: self = .hrv
-    case 0x485449: self = .hti
-    case 0x48554e: self = .hun
-    case 0x49444e: self = .idn
-    case 0x494d4e: self = .imn
-    case 0x494e44: self = .ind
-    case 0x494f54: self = .iot
-    case 0x49524c: self = .irl
-    case 0x49524e: self = .irn
-    case 0x495251: self = .irq
-    case 0x49534c: self = .isl
-    case 0x495352: self = .isr
-    case 0x495441: self = .ita
-    case 0x4a414d: self = .jam
-    case 0x4a4559: self = .jey
-    case 0x4a4f52: self = .jor
-    case 0x4a504e: self = .jpn
-    case 0x4b415a: self = .kaz
-    case 0x4b454e: self = .ken
-    case 0x4b475a: self = .kgz
-    case 0x4b484d: self = .khm
-    case 0x4b4952: self = .kir
-    case 0x4b4e41: self = .kna
-    case 0x4b4f52: self = .kor
-    case 0x4b5754: self = .kwt
-    case 0x4c414f: self = .lao
-    case 0x4c424e: self = .lbn
-    case 0x4c4252: self = .lbr
-    case 0x4c4259: self = .lby
-    case 0x4c4341: self = .lca
-    case 0x4c4945: self = .lie
-    case 0x4c4b41: self = .lka
-    case 0x4c534f: self = .lso
-    case 0x4c5455: self = .ltu
-    case 0x4c5558: self = .lux
-    case 0x4c5641: self = .lva
-    case 0x4d4143: self = .mac
-    case 0x4d4146: self = .maf
-    case 0x4d4152: self = .mar
-    case 0x4d434f: self = .mco
-    case 0x4d4441: self = .mda
-    case 0x4d4447: self = .mdg
-    case 0x4d4456: self = .mdv
-    case 0x4d4558: self = .mex
-    case 0x4d484c: self = .mhl
-    case 0x4d4b44: self = .mkd
-    case 0x4d4c49: self = .mli
-    case 0x4d4c54: self = .mlt
-    case 0x4d4d52: self = .mmr
-    case 0x4d4e45: self = .mne
-    case 0x4d4e47: self = .mng
-    case 0x4d4e50: self = .mnp
-    case 0x4d4f5a: self = .moz
-    case 0x4d5254: self = .mrt
-    case 0x4d5352: self = .msr
-    case 0x4d5451: self = .mtq
-    case 0x4d5553: self = .mus
-    case 0x4d5749: self = .mwi
-    case 0x4d5953: self = .mys
-    case 0x4d5954: self = .myt
-    case 0x4e414d: self = .nam
-    case 0x4e434c: self = .ncl
-    case 0x4e4552: self = .ner
-    case 0x4e464b: self = .nfk
-    case 0x4e4741: self = .nga
-    case 0x4e4943: self = .nic
-    case 0x4e4955: self = .niu
-    case 0x4e4c44: self = .nld
-    case 0x4e4f52: self = .nor
-    case 0x4e504c: self = .npl
-    case 0x4e5255: self = .nru
-    case 0x4e5a4c: self = .nzl
-    case 0x4f4d4e: self = .omn
-    case 0x50414b: self = .pak
-    case 0x50414e: self = .pan
-    case 0x50434e: self = .pcn
-    case 0x504552: self = .per
-    case 0x50484c: self = .phl
-    case 0x504c57: self = .plw
-    case 0x504e47: self = .png
-    case 0x504f4c: self = .pol
-    case 0x505249: self = .pri
-    case 0x50524b: self = .prk
-    case 0x505254: self = .prt
-    case 0x505259: self = .pry
-    case 0x505345: self = .pse
-    case 0x505946: self = .pyf
-    case 0x514154: self = .qat
-    case 0x524555: self = .reu
-    case 0x524f55: self = .rou
-    case 0x525553: self = .rus
-    case 0x525741: self = .rwa
-    case 0x534155: self = .sau
-    case 0x53444e: self = .sdn
-    case 0x53454e: self = .sen
-    case 0x534750: self = .sgp
-    case 0x534753: self = .sgs
-    case 0x53484e: self = .shn
-    case 0x534a4d: self = .sjm
-    case 0x534c42: self = .slb
-    case 0x534c45: self = .sle
-    case 0x534c56: self = .slv
-    case 0x534d52: self = .smr
-    case 0x534f4d: self = .som
-    case 0x53504d: self = .spm
-    case 0x535242: self = .srb
-    case 0x535344: self = .ssd
-    case 0x535450: self = .stp
-    case 0x535552: self = .sur
-    case 0x53564b: self = .svk
-    case 0x53564e: self = .svn
-    case 0x535745: self = .swe
-    case 0x53575a: self = .swz
-    case 0x53584d: self = .sxm
-    case 0x535943: self = .syc
-    case 0x535952: self = .syr
-    case 0x544341: self = .tca
-    case 0x544344: self = .tcd
-    case 0x54474f: self = .tgo
-    case 0x544841: self = .tha
-    case 0x544a4b: self = .tjk
-    case 0x544b4c: self = .tkl
-    case 0x544b4d: self = .tkm
-    case 0x544c53: self = .tls
-    case 0x544f4e: self = .ton
-    case 0x54544f: self = .tto
-    case 0x54554e: self = .tun
-    case 0x545552: self = .tur
-    case 0x545556: self = .tuv
-    case 0x54574e: self = .twn
-    case 0x545a41: self = .tza
-    case 0x554741: self = .uga
-    case 0x554b52: self = .ukr
-    case 0x554d49: self = .umi
-    case 0x555259: self = .ury
-    case 0x555341: self = .usa
-    case 0x555a42: self = .uzb
-    case 0x564154: self = .vat
-    case 0x564354: self = .vct
-    case 0x56454e: self = .ven
-    case 0x564742: self = .vgb
-    case 0x564952: self = .vir
-    case 0x564e4d: self = .vnm
-    case 0x565554: self = .vut
-    case 0x574c46: self = .wlf
-    case 0x57534d: self = .wsm
-    case 0x59454d: self = .yem
-    case 0x5a4146: self = .zaf
-    case 0x5a4d42: self = .zmb
-    case 0x5a5745: self = .zwe
+    case 0x616277: self = .abw
+    case 0x616667: self = .afg
+    case 0x61676f: self = .ago
+    case 0x616961: self = .aia
+    case 0x616c61: self = .ala
+    case 0x616c62: self = .alb
+    case 0x616e64: self = .and
+    case 0x617265: self = .are
+    case 0x617267: self = .arg
+    case 0x61726d: self = .arm
+    case 0x61736d: self = .asm
+    case 0x617461: self = .ata
+    case 0x617466: self = .atf
+    case 0x617467: self = .atg
+    case 0x617573: self = .aus
+    case 0x617574: self = .aut
+    case 0x617a65: self = .aze
+    case 0x626469: self = .bdi
+    case 0x62656c: self = .bel
+    case 0x62656e: self = .ben
+    case 0x626573: self = .bes
+    case 0x626661: self = .bfa
+    case 0x626764: self = .bgd
+    case 0x626772: self = .bgr
+    case 0x626872: self = .bhr
+    case 0x626873: self = .bhs
+    case 0x626968: self = .bih
+    case 0x626c6d: self = .blm
+    case 0x626c72: self = .blr
+    case 0x626c7a: self = .blz
+    case 0x626d75: self = .bmu
+    case 0x626f6c: self = .bol
+    case 0x627261: self = .bra
+    case 0x627262: self = .brb
+    case 0x62726e: self = .brn
+    case 0x62746e: self = .btn
+    case 0x627674: self = .bvt
+    case 0x627761: self = .bwa
+    case 0x636166: self = .caf
+    case 0x63616e: self = .can
+    case 0x63636b: self = .cck
+    case 0x636865: self = .che
+    case 0x63686c: self = .chl
+    case 0x63686e: self = .chn
+    case 0x636976: self = .civ
+    case 0x636d72: self = .cmr
+    case 0x636f64: self = .cod
+    case 0x636f67: self = .cog
+    case 0x636f6b: self = .cok
+    case 0x636f6c: self = .col
+    case 0x636f6d: self = .com
+    case 0x637076: self = .cpv
+    case 0x637269: self = .cri
+    case 0x637562: self = .cub
+    case 0x637577: self = .cuw
+    case 0x637872: self = .cxr
+    case 0x63796d: self = .cym
+    case 0x637970: self = .cyp
+    case 0x637a65: self = .cze
+    case 0x646575: self = .deu
+    case 0x646a69: self = .dji
+    case 0x646d61: self = .dma
+    case 0x646e6b: self = .dnk
+    case 0x646f6d: self = .dom
+    case 0x647a61: self = .dza
+    case 0x656375: self = .ecu
+    case 0x656779: self = .egy
+    case 0x657269: self = .eri
+    case 0x657368: self = .esh
+    case 0x657370: self = .esp
+    case 0x657374: self = .est
+    case 0x657468: self = .eth
+    case 0x66696e: self = .fin
+    case 0x666a69: self = .fji
+    case 0x666c6b: self = .flk
+    case 0x667261: self = .fra
+    case 0x66726f: self = .fro
+    case 0x66736d: self = .fsm
+    case 0x676162: self = .gab
+    case 0x676272: self = .gbr
+    case 0x67656f: self = .geo
+    case 0x676779: self = .ggy
+    case 0x676861: self = .gha
+    case 0x676962: self = .gib
+    case 0x67696e: self = .gin
+    case 0x676c70: self = .glp
+    case 0x676d62: self = .gmb
+    case 0x676e62: self = .gnb
+    case 0x676e71: self = .gnq
+    case 0x677263: self = .grc
+    case 0x677264: self = .grd
+    case 0x67726c: self = .grl
+    case 0x67746d: self = .gtm
+    case 0x677566: self = .guf
+    case 0x67756d: self = .gum
+    case 0x677579: self = .guy
+    case 0x686b67: self = .hkg
+    case 0x686d64: self = .hmd
+    case 0x686e64: self = .hnd
+    case 0x687276: self = .hrv
+    case 0x687469: self = .hti
+    case 0x68756e: self = .hun
+    case 0x69646e: self = .idn
+    case 0x696d6e: self = .imn
+    case 0x696e64: self = .ind
+    case 0x696f74: self = .iot
+    case 0x69726c: self = .irl
+    case 0x69726e: self = .irn
+    case 0x697271: self = .irq
+    case 0x69736c: self = .isl
+    case 0x697372: self = .isr
+    case 0x697461: self = .ita
+    case 0x6a616d: self = .jam
+    case 0x6a6579: self = .jey
+    case 0x6a6f72: self = .jor
+    case 0x6a706e: self = .jpn
+    case 0x6b617a: self = .kaz
+    case 0x6b656e: self = .ken
+    case 0x6b677a: self = .kgz
+    case 0x6b686d: self = .khm
+    case 0x6b6972: self = .kir
+    case 0x6b6e61: self = .kna
+    case 0x6b6f72: self = .kor
+    case 0x6b7774: self = .kwt
+    case 0x6c616f: self = .lao
+    case 0x6c626e: self = .lbn
+    case 0x6c6272: self = .lbr
+    case 0x6c6279: self = .lby
+    case 0x6c6361: self = .lca
+    case 0x6c6965: self = .lie
+    case 0x6c6b61: self = .lka
+    case 0x6c736f: self = .lso
+    case 0x6c7475: self = .ltu
+    case 0x6c7578: self = .lux
+    case 0x6c7661: self = .lva
+    case 0x6d6163: self = .mac
+    case 0x6d6166: self = .maf
+    case 0x6d6172: self = .mar
+    case 0x6d636f: self = .mco
+    case 0x6d6461: self = .mda
+    case 0x6d6467: self = .mdg
+    case 0x6d6476: self = .mdv
+    case 0x6d6578: self = .mex
+    case 0x6d686c: self = .mhl
+    case 0x6d6b64: self = .mkd
+    case 0x6d6c69: self = .mli
+    case 0x6d6c74: self = .mlt
+    case 0x6d6d72: self = .mmr
+    case 0x6d6e65: self = .mne
+    case 0x6d6e67: self = .mng
+    case 0x6d6e70: self = .mnp
+    case 0x6d6f7a: self = .moz
+    case 0x6d7274: self = .mrt
+    case 0x6d7372: self = .msr
+    case 0x6d7471: self = .mtq
+    case 0x6d7573: self = .mus
+    case 0x6d7769: self = .mwi
+    case 0x6d7973: self = .mys
+    case 0x6d7974: self = .myt
+    case 0x6e616d: self = .nam
+    case 0x6e636c: self = .ncl
+    case 0x6e6572: self = .ner
+    case 0x6e666b: self = .nfk
+    case 0x6e6761: self = .nga
+    case 0x6e6963: self = .nic
+    case 0x6e6975: self = .niu
+    case 0x6e6c64: self = .nld
+    case 0x6e6f72: self = .nor
+    case 0x6e706c: self = .npl
+    case 0x6e7275: self = .nru
+    case 0x6e7a6c: self = .nzl
+    case 0x6f6d6e: self = .omn
+    case 0x70616b: self = .pak
+    case 0x70616e: self = .pan
+    case 0x70636e: self = .pcn
+    case 0x706572: self = .per
+    case 0x70686c: self = .phl
+    case 0x706c77: self = .plw
+    case 0x706e67: self = .png
+    case 0x706f6c: self = .pol
+    case 0x707269: self = .pri
+    case 0x70726b: self = .prk
+    case 0x707274: self = .prt
+    case 0x707279: self = .pry
+    case 0x707365: self = .pse
+    case 0x707966: self = .pyf
+    case 0x716174: self = .qat
+    case 0x726575: self = .reu
+    case 0x726f75: self = .rou
+    case 0x727573: self = .rus
+    case 0x727761: self = .rwa
+    case 0x736175: self = .sau
+    case 0x73646e: self = .sdn
+    case 0x73656e: self = .sen
+    case 0x736770: self = .sgp
+    case 0x736773: self = .sgs
+    case 0x73686e: self = .shn
+    case 0x736a6d: self = .sjm
+    case 0x736c62: self = .slb
+    case 0x736c65: self = .sle
+    case 0x736c76: self = .slv
+    case 0x736d72: self = .smr
+    case 0x736f6d: self = .som
+    case 0x73706d: self = .spm
+    case 0x737262: self = .srb
+    case 0x737364: self = .ssd
+    case 0x737470: self = .stp
+    case 0x737572: self = .sur
+    case 0x73766b: self = .svk
+    case 0x73766e: self = .svn
+    case 0x737765: self = .swe
+    case 0x73777a: self = .swz
+    case 0x73786d: self = .sxm
+    case 0x737963: self = .syc
+    case 0x737972: self = .syr
+    case 0x746361: self = .tca
+    case 0x746364: self = .tcd
+    case 0x74676f: self = .tgo
+    case 0x746861: self = .tha
+    case 0x746a6b: self = .tjk
+    case 0x746b6c: self = .tkl
+    case 0x746b6d: self = .tkm
+    case 0x746c73: self = .tls
+    case 0x746f6e: self = .ton
+    case 0x74746f: self = .tto
+    case 0x74756e: self = .tun
+    case 0x747572: self = .tur
+    case 0x747576: self = .tuv
+    case 0x74776e: self = .twn
+    case 0x747a61: self = .tza
+    case 0x756761: self = .uga
+    case 0x756b72: self = .ukr
+    case 0x756d69: self = .umi
+    case 0x757279: self = .ury
+    case 0x757361: self = .usa
+    case 0x757a62: self = .uzb
+    case 0x766174: self = .vat
+    case 0x766374: self = .vct
+    case 0x76656e: self = .ven
+    case 0x766762: self = .vgb
+    case 0x766972: self = .vir
+    case 0x766e6d: self = .vnm
+    case 0x767574: self = .vut
+    case 0x776c66: self = .wlf
+    case 0x77736d: self = .wsm
+    case 0x79656d: self = .yem
+    case 0x7a6166: self = .zaf
+    case 0x7a6d62: self = .zmb
+    case 0x7a7765: self = .zwe
     default: return nil
     }
   }
@@ -774,255 +774,255 @@ public enum Country: UInt16, Identifiable, CaseIterable, Codable {
       return nil
     }
     switch asciiUIntCode {
-    case 0x4157, 0x414257: self = .abw
-    case 0x4146, 0x414647: self = .afg
-    case 0x414f, 0x41474f: self = .ago
-    case 0x4149, 0x414941: self = .aia
-    case 0x4158, 0x414c41: self = .ala
-    case 0x414c, 0x414c42: self = .alb
-    case 0x4144, 0x414e44: self = .and
-    case 0x4145, 0x415245: self = .are
-    case 0x4152, 0x415247: self = .arg
-    case 0x414d, 0x41524d: self = .arm
-    case 0x4153, 0x41534d: self = .asm
-    case 0x4151, 0x415441: self = .ata
-    case 0x5446, 0x415446: self = .atf
-    case 0x4147, 0x415447: self = .atg
-    case 0x4155, 0x415553: self = .aus
-    case 0x4154, 0x415554: self = .aut
-    case 0x415a, 0x415a45: self = .aze
-    case 0x4249, 0x424449: self = .bdi
-    case 0x4245, 0x42454c: self = .bel
-    case 0x424a, 0x42454e: self = .ben
-    case 0x4251, 0x424553: self = .bes
-    case 0x4246, 0x424641: self = .bfa
-    case 0x4244, 0x424744: self = .bgd
-    case 0x4247, 0x424752: self = .bgr
-    case 0x4248, 0x424852: self = .bhr
-    case 0x4253, 0x424853: self = .bhs
-    case 0x4241, 0x424948: self = .bih
-    case 0x424c, 0x424c4d: self = .blm
-    case 0x4259, 0x424c52: self = .blr
-    case 0x425a, 0x424c5a: self = .blz
-    case 0x424d, 0x424d55: self = .bmu
-    case 0x424f, 0x424f4c: self = .bol
-    case 0x4252, 0x425241: self = .bra
-    case 0x4242, 0x425242: self = .brb
-    case 0x424e, 0x42524e: self = .brn
-    case 0x4254, 0x42544e: self = .btn
-    case 0x4256, 0x425654: self = .bvt
-    case 0x4257, 0x425741: self = .bwa
-    case 0x4346, 0x434146: self = .caf
-    case 0x4341, 0x43414e: self = .can
-    case 0x4343, 0x43434b: self = .cck
-    case 0x4348, 0x434845: self = .che
-    case 0x434c, 0x43484c: self = .chl
-    case 0x434e, 0x43484e: self = .chn
-    case 0x4349, 0x434956: self = .civ
-    case 0x434d, 0x434d52: self = .cmr
-    case 0x4344, 0x434f44: self = .cod
-    case 0x4347, 0x434f47: self = .cog
-    case 0x434b, 0x434f4b: self = .cok
-    case 0x434f, 0x434f4c: self = .col
-    case 0x4b4d, 0x434f4d: self = .com
-    case 0x4356, 0x435056: self = .cpv
-    case 0x4352, 0x435249: self = .cri
-    case 0x4355, 0x435542: self = .cub
-    case 0x4357, 0x435557: self = .cuw
-    case 0x4358, 0x435852: self = .cxr
-    case 0x4b59, 0x43594d: self = .cym
-    case 0x4359, 0x435950: self = .cyp
-    case 0x435a, 0x435a45: self = .cze
-    case 0x4445, 0x444555: self = .deu
-    case 0x444a, 0x444a49: self = .dji
-    case 0x444d, 0x444d41: self = .dma
-    case 0x444b, 0x444e4b: self = .dnk
-    case 0x444f, 0x444f4d: self = .dom
-    case 0x445a, 0x445a41: self = .dza
-    case 0x4543, 0x454355: self = .ecu
-    case 0x4547, 0x454759: self = .egy
-    case 0x4552, 0x455249: self = .eri
-    case 0x4548, 0x455348: self = .esh
-    case 0x4553, 0x455350: self = .esp
-    case 0x4545, 0x455354: self = .est
-    case 0x4554, 0x455448: self = .eth
-    case 0x4649, 0x46494e: self = .fin
-    case 0x464a, 0x464a49: self = .fji
-    case 0x464b, 0x464c4b: self = .flk
-    case 0x4652, 0x465241: self = .fra
-    case 0x464f, 0x46524f: self = .fro
-    case 0x464d, 0x46534d: self = .fsm
-    case 0x4741, 0x474142: self = .gab
-    case 0x4742, 0x474252: self = .gbr
-    case 0x4745, 0x47454f: self = .geo
-    case 0x4747, 0x474759: self = .ggy
-    case 0x4748, 0x474841: self = .gha
-    case 0x4749, 0x474942: self = .gib
-    case 0x474e, 0x47494e: self = .gin
-    case 0x4750, 0x474c50: self = .glp
-    case 0x474d, 0x474d42: self = .gmb
-    case 0x4757, 0x474e42: self = .gnb
-    case 0x4751, 0x474e51: self = .gnq
-    case 0x4752, 0x475243: self = .grc
-    case 0x4744, 0x475244: self = .grd
-    case 0x474c, 0x47524c: self = .grl
-    case 0x4754, 0x47544d: self = .gtm
-    case 0x4746, 0x475546: self = .guf
-    case 0x4755, 0x47554d: self = .gum
-    case 0x4759, 0x475559: self = .guy
-    case 0x484b, 0x484b47: self = .hkg
-    case 0x484d, 0x484d44: self = .hmd
-    case 0x484e, 0x484e44: self = .hnd
-    case 0x4852, 0x485256: self = .hrv
-    case 0x4854, 0x485449: self = .hti
-    case 0x4855, 0x48554e: self = .hun
-    case 0x4944, 0x49444e: self = .idn
-    case 0x494d, 0x494d4e: self = .imn
-    case 0x494e, 0x494e44: self = .ind
-    case 0x494f, 0x494f54: self = .iot
-    case 0x4945, 0x49524c: self = .irl
-    case 0x4952, 0x49524e: self = .irn
-    case 0x4951, 0x495251: self = .irq
-    case 0x4953, 0x49534c: self = .isl
-    case 0x494c, 0x495352: self = .isr
-    case 0x4954, 0x495441: self = .ita
-    case 0x4a4d, 0x4a414d: self = .jam
-    case 0x4a45, 0x4a4559: self = .jey
-    case 0x4a4f, 0x4a4f52: self = .jor
-    case 0x4a50, 0x4a504e: self = .jpn
-    case 0x4b5a, 0x4b415a: self = .kaz
-    case 0x4b45, 0x4b454e: self = .ken
-    case 0x4b47, 0x4b475a: self = .kgz
-    case 0x4b48, 0x4b484d: self = .khm
-    case 0x4b49, 0x4b4952: self = .kir
-    case 0x4b4e, 0x4b4e41: self = .kna
-    case 0x4b52, 0x4b4f52: self = .kor
-    case 0x4b57, 0x4b5754: self = .kwt
-    case 0x4c41, 0x4c414f: self = .lao
-    case 0x4c42, 0x4c424e: self = .lbn
-    case 0x4c52, 0x4c4252: self = .lbr
-    case 0x4c59, 0x4c4259: self = .lby
-    case 0x4c43, 0x4c4341: self = .lca
-    case 0x4c49, 0x4c4945: self = .lie
-    case 0x4c4b, 0x4c4b41: self = .lka
-    case 0x4c53, 0x4c534f: self = .lso
-    case 0x4c54, 0x4c5455: self = .ltu
-    case 0x4c55, 0x4c5558: self = .lux
-    case 0x4c56, 0x4c5641: self = .lva
-    case 0x4d4f, 0x4d4143: self = .mac
-    case 0x4d46, 0x4d4146: self = .maf
-    case 0x4d41, 0x4d4152: self = .mar
-    case 0x4d43, 0x4d434f: self = .mco
-    case 0x4d44, 0x4d4441: self = .mda
-    case 0x4d47, 0x4d4447: self = .mdg
-    case 0x4d56, 0x4d4456: self = .mdv
-    case 0x4d58, 0x4d4558: self = .mex
-    case 0x4d48, 0x4d484c: self = .mhl
-    case 0x4d4b, 0x4d4b44: self = .mkd
-    case 0x4d4c, 0x4d4c49: self = .mli
-    case 0x4d54, 0x4d4c54: self = .mlt
-    case 0x4d4d, 0x4d4d52: self = .mmr
-    case 0x4d45, 0x4d4e45: self = .mne
-    case 0x4d4e, 0x4d4e47: self = .mng
-    case 0x4d50, 0x4d4e50: self = .mnp
-    case 0x4d5a, 0x4d4f5a: self = .moz
-    case 0x4d52, 0x4d5254: self = .mrt
-    case 0x4d53, 0x4d5352: self = .msr
-    case 0x4d51, 0x4d5451: self = .mtq
-    case 0x4d55, 0x4d5553: self = .mus
-    case 0x4d57, 0x4d5749: self = .mwi
-    case 0x4d59, 0x4d5953: self = .mys
-    case 0x5954, 0x4d5954: self = .myt
-    case 0x4e41, 0x4e414d: self = .nam
-    case 0x4e43, 0x4e434c: self = .ncl
-    case 0x4e45, 0x4e4552: self = .ner
-    case 0x4e46, 0x4e464b: self = .nfk
-    case 0x4e47, 0x4e4741: self = .nga
-    case 0x4e49, 0x4e4943: self = .nic
-    case 0x4e55, 0x4e4955: self = .niu
-    case 0x4e4c, 0x4e4c44: self = .nld
-    case 0x4e4f, 0x4e4f52: self = .nor
-    case 0x4e50, 0x4e504c: self = .npl
-    case 0x4e52, 0x4e5255: self = .nru
-    case 0x4e5a, 0x4e5a4c: self = .nzl
-    case 0x4f4d, 0x4f4d4e: self = .omn
-    case 0x504b, 0x50414b: self = .pak
-    case 0x5041, 0x50414e: self = .pan
-    case 0x504e, 0x50434e: self = .pcn
-    case 0x5045, 0x504552: self = .per
-    case 0x5048, 0x50484c: self = .phl
-    case 0x5057, 0x504c57: self = .plw
-    case 0x5047, 0x504e47: self = .png
-    case 0x504c, 0x504f4c: self = .pol
-    case 0x5052, 0x505249: self = .pri
-    case 0x4b50, 0x50524b: self = .prk
-    case 0x5054, 0x505254: self = .prt
-    case 0x5059, 0x505259: self = .pry
-    case 0x5053, 0x505345: self = .pse
-    case 0x5046, 0x505946: self = .pyf
-    case 0x5141, 0x514154: self = .qat
-    case 0x5245, 0x524555: self = .reu
-    case 0x524f, 0x524f55: self = .rou
-    case 0x5255, 0x525553: self = .rus
-    case 0x5257, 0x525741: self = .rwa
-    case 0x5341, 0x534155: self = .sau
-    case 0x5344, 0x53444e: self = .sdn
-    case 0x534e, 0x53454e: self = .sen
-    case 0x5347, 0x534750: self = .sgp
-    case 0x4753, 0x534753: self = .sgs
-    case 0x5348, 0x53484e: self = .shn
-    case 0x534a, 0x534a4d: self = .sjm
-    case 0x5342, 0x534c42: self = .slb
-    case 0x534c, 0x534c45: self = .sle
-    case 0x5356, 0x534c56: self = .slv
-    case 0x534d, 0x534d52: self = .smr
-    case 0x534f, 0x534f4d: self = .som
-    case 0x504d, 0x53504d: self = .spm
-    case 0x5253, 0x535242: self = .srb
-    case 0x5353, 0x535344: self = .ssd
-    case 0x5354, 0x535450: self = .stp
-    case 0x5352, 0x535552: self = .sur
-    case 0x534b, 0x53564b: self = .svk
-    case 0x5349, 0x53564e: self = .svn
-    case 0x5345, 0x535745: self = .swe
-    case 0x535a, 0x53575a: self = .swz
-    case 0x5358, 0x53584d: self = .sxm
-    case 0x5343, 0x535943: self = .syc
-    case 0x5359, 0x535952: self = .syr
-    case 0x5443, 0x544341: self = .tca
-    case 0x5444, 0x544344: self = .tcd
-    case 0x5447, 0x54474f: self = .tgo
-    case 0x5448, 0x544841: self = .tha
-    case 0x544a, 0x544a4b: self = .tjk
-    case 0x544b, 0x544b4c: self = .tkl
-    case 0x544d, 0x544b4d: self = .tkm
-    case 0x544c, 0x544c53: self = .tls
-    case 0x544f, 0x544f4e: self = .ton
-    case 0x5454, 0x54544f: self = .tto
-    case 0x544e, 0x54554e: self = .tun
-    case 0x5452, 0x545552: self = .tur
-    case 0x5456, 0x545556: self = .tuv
-    case 0x5457, 0x54574e: self = .twn
-    case 0x545a, 0x545a41: self = .tza
-    case 0x5547, 0x554741: self = .uga
-    case 0x5541, 0x554b52: self = .ukr
-    case 0x554d, 0x554d49: self = .umi
-    case 0x5559, 0x555259: self = .ury
-    case 0x5553, 0x555341: self = .usa
-    case 0x555a, 0x555a42: self = .uzb
-    case 0x5641, 0x564154: self = .vat
-    case 0x5643, 0x564354: self = .vct
-    case 0x5645, 0x56454e: self = .ven
-    case 0x5647, 0x564742: self = .vgb
-    case 0x5649, 0x564952: self = .vir
-    case 0x564e, 0x564e4d: self = .vnm
-    case 0x5655, 0x565554: self = .vut
-    case 0x5746, 0x574c46: self = .wlf
-    case 0x5753, 0x57534d: self = .wsm
-    case 0x5945, 0x59454d: self = .yem
-    case 0x5a41, 0x5a4146: self = .zaf
-    case 0x5a4d, 0x5a4d42: self = .zmb
-    case 0x5a57, 0x5a5745: self = .zwe
+    case 0x6177, 0x616277: self = .abw
+    case 0x6166, 0x616667: self = .afg
+    case 0x616f, 0x61676f: self = .ago
+    case 0x6169, 0x616961: self = .aia
+    case 0x6178, 0x616c61: self = .ala
+    case 0x616c, 0x616c62: self = .alb
+    case 0x6164, 0x616e64: self = .and
+    case 0x6165, 0x617265: self = .are
+    case 0x6172, 0x617267: self = .arg
+    case 0x616d, 0x61726d: self = .arm
+    case 0x6173, 0x61736d: self = .asm
+    case 0x6171, 0x617461: self = .ata
+    case 0x7466, 0x617466: self = .atf
+    case 0x6167, 0x617467: self = .atg
+    case 0x6175, 0x617573: self = .aus
+    case 0x6174, 0x617574: self = .aut
+    case 0x617a, 0x617a65: self = .aze
+    case 0x6269, 0x626469: self = .bdi
+    case 0x6265, 0x62656c: self = .bel
+    case 0x626a, 0x62656e: self = .ben
+    case 0x6271, 0x626573: self = .bes
+    case 0x6266, 0x626661: self = .bfa
+    case 0x6264, 0x626764: self = .bgd
+    case 0x6267, 0x626772: self = .bgr
+    case 0x6268, 0x626872: self = .bhr
+    case 0x6273, 0x626873: self = .bhs
+    case 0x6261, 0x626968: self = .bih
+    case 0x626c, 0x626c6d: self = .blm
+    case 0x6279, 0x626c72: self = .blr
+    case 0x627a, 0x626c7a: self = .blz
+    case 0x626d, 0x626d75: self = .bmu
+    case 0x626f, 0x626f6c: self = .bol
+    case 0x6272, 0x627261: self = .bra
+    case 0x6262, 0x627262: self = .brb
+    case 0x626e, 0x62726e: self = .brn
+    case 0x6274, 0x62746e: self = .btn
+    case 0x6276, 0x627674: self = .bvt
+    case 0x6277, 0x627761: self = .bwa
+    case 0x6366, 0x636166: self = .caf
+    case 0x6361, 0x63616e: self = .can
+    case 0x6363, 0x63636b: self = .cck
+    case 0x6368, 0x636865: self = .che
+    case 0x636c, 0x63686c: self = .chl
+    case 0x636e, 0x63686e: self = .chn
+    case 0x6369, 0x636976: self = .civ
+    case 0x636d, 0x636d72: self = .cmr
+    case 0x6364, 0x636f64: self = .cod
+    case 0x6367, 0x636f67: self = .cog
+    case 0x636b, 0x636f6b: self = .cok
+    case 0x636f, 0x636f6c: self = .col
+    case 0x6b6d, 0x636f6d: self = .com
+    case 0x6376, 0x637076: self = .cpv
+    case 0x6372, 0x637269: self = .cri
+    case 0x6375, 0x637562: self = .cub
+    case 0x6377, 0x637577: self = .cuw
+    case 0x6378, 0x637872: self = .cxr
+    case 0x6b79, 0x63796d: self = .cym
+    case 0x6379, 0x637970: self = .cyp
+    case 0x637a, 0x637a65: self = .cze
+    case 0x6465, 0x646575: self = .deu
+    case 0x646a, 0x646a69: self = .dji
+    case 0x646d, 0x646d61: self = .dma
+    case 0x646b, 0x646e6b: self = .dnk
+    case 0x646f, 0x646f6d: self = .dom
+    case 0x647a, 0x647a61: self = .dza
+    case 0x6563, 0x656375: self = .ecu
+    case 0x6567, 0x656779: self = .egy
+    case 0x6572, 0x657269: self = .eri
+    case 0x6568, 0x657368: self = .esh
+    case 0x6573, 0x657370: self = .esp
+    case 0x6565, 0x657374: self = .est
+    case 0x6574, 0x657468: self = .eth
+    case 0x6669, 0x66696e: self = .fin
+    case 0x666a, 0x666a69: self = .fji
+    case 0x666b, 0x666c6b: self = .flk
+    case 0x6672, 0x667261: self = .fra
+    case 0x666f, 0x66726f: self = .fro
+    case 0x666d, 0x66736d: self = .fsm
+    case 0x6761, 0x676162: self = .gab
+    case 0x6762, 0x676272: self = .gbr
+    case 0x6765, 0x67656f: self = .geo
+    case 0x6767, 0x676779: self = .ggy
+    case 0x6768, 0x676861: self = .gha
+    case 0x6769, 0x676962: self = .gib
+    case 0x676e, 0x67696e: self = .gin
+    case 0x6770, 0x676c70: self = .glp
+    case 0x676d, 0x676d62: self = .gmb
+    case 0x6777, 0x676e62: self = .gnb
+    case 0x6771, 0x676e71: self = .gnq
+    case 0x6772, 0x677263: self = .grc
+    case 0x6764, 0x677264: self = .grd
+    case 0x676c, 0x67726c: self = .grl
+    case 0x6774, 0x67746d: self = .gtm
+    case 0x6766, 0x677566: self = .guf
+    case 0x6775, 0x67756d: self = .gum
+    case 0x6779, 0x677579: self = .guy
+    case 0x686b, 0x686b67: self = .hkg
+    case 0x686d, 0x686d64: self = .hmd
+    case 0x686e, 0x686e64: self = .hnd
+    case 0x6872, 0x687276: self = .hrv
+    case 0x6874, 0x687469: self = .hti
+    case 0x6875, 0x68756e: self = .hun
+    case 0x6964, 0x69646e: self = .idn
+    case 0x696d, 0x696d6e: self = .imn
+    case 0x696e, 0x696e64: self = .ind
+    case 0x696f, 0x696f74: self = .iot
+    case 0x6965, 0x69726c: self = .irl
+    case 0x6972, 0x69726e: self = .irn
+    case 0x6971, 0x697271: self = .irq
+    case 0x6973, 0x69736c: self = .isl
+    case 0x696c, 0x697372: self = .isr
+    case 0x6974, 0x697461: self = .ita
+    case 0x6a6d, 0x6a616d: self = .jam
+    case 0x6a65, 0x6a6579: self = .jey
+    case 0x6a6f, 0x6a6f72: self = .jor
+    case 0x6a70, 0x6a706e: self = .jpn
+    case 0x6b7a, 0x6b617a: self = .kaz
+    case 0x6b65, 0x6b656e: self = .ken
+    case 0x6b67, 0x6b677a: self = .kgz
+    case 0x6b68, 0x6b686d: self = .khm
+    case 0x6b69, 0x6b6972: self = .kir
+    case 0x6b6e, 0x6b6e61: self = .kna
+    case 0x6b72, 0x6b6f72: self = .kor
+    case 0x6b77, 0x6b7774: self = .kwt
+    case 0x6c61, 0x6c616f: self = .lao
+    case 0x6c62, 0x6c626e: self = .lbn
+    case 0x6c72, 0x6c6272: self = .lbr
+    case 0x6c79, 0x6c6279: self = .lby
+    case 0x6c63, 0x6c6361: self = .lca
+    case 0x6c69, 0x6c6965: self = .lie
+    case 0x6c6b, 0x6c6b61: self = .lka
+    case 0x6c73, 0x6c736f: self = .lso
+    case 0x6c74, 0x6c7475: self = .ltu
+    case 0x6c75, 0x6c7578: self = .lux
+    case 0x6c76, 0x6c7661: self = .lva
+    case 0x6d6f, 0x6d6163: self = .mac
+    case 0x6d66, 0x6d6166: self = .maf
+    case 0x6d61, 0x6d6172: self = .mar
+    case 0x6d63, 0x6d636f: self = .mco
+    case 0x6d64, 0x6d6461: self = .mda
+    case 0x6d67, 0x6d6467: self = .mdg
+    case 0x6d76, 0x6d6476: self = .mdv
+    case 0x6d78, 0x6d6578: self = .mex
+    case 0x6d68, 0x6d686c: self = .mhl
+    case 0x6d6b, 0x6d6b64: self = .mkd
+    case 0x6d6c, 0x6d6c69: self = .mli
+    case 0x6d74, 0x6d6c74: self = .mlt
+    case 0x6d6d, 0x6d6d72: self = .mmr
+    case 0x6d65, 0x6d6e65: self = .mne
+    case 0x6d6e, 0x6d6e67: self = .mng
+    case 0x6d70, 0x6d6e70: self = .mnp
+    case 0x6d7a, 0x6d6f7a: self = .moz
+    case 0x6d72, 0x6d7274: self = .mrt
+    case 0x6d73, 0x6d7372: self = .msr
+    case 0x6d71, 0x6d7471: self = .mtq
+    case 0x6d75, 0x6d7573: self = .mus
+    case 0x6d77, 0x6d7769: self = .mwi
+    case 0x6d79, 0x6d7973: self = .mys
+    case 0x7974, 0x6d7974: self = .myt
+    case 0x6e61, 0x6e616d: self = .nam
+    case 0x6e63, 0x6e636c: self = .ncl
+    case 0x6e65, 0x6e6572: self = .ner
+    case 0x6e66, 0x6e666b: self = .nfk
+    case 0x6e67, 0x6e6761: self = .nga
+    case 0x6e69, 0x6e6963: self = .nic
+    case 0x6e75, 0x6e6975: self = .niu
+    case 0x6e6c, 0x6e6c64: self = .nld
+    case 0x6e6f, 0x6e6f72: self = .nor
+    case 0x6e70, 0x6e706c: self = .npl
+    case 0x6e72, 0x6e7275: self = .nru
+    case 0x6e7a, 0x6e7a6c: self = .nzl
+    case 0x6f6d, 0x6f6d6e: self = .omn
+    case 0x706b, 0x70616b: self = .pak
+    case 0x7061, 0x70616e: self = .pan
+    case 0x706e, 0x70636e: self = .pcn
+    case 0x7065, 0x706572: self = .per
+    case 0x7068, 0x70686c: self = .phl
+    case 0x7077, 0x706c77: self = .plw
+    case 0x7067, 0x706e67: self = .png
+    case 0x706c, 0x706f6c: self = .pol
+    case 0x7072, 0x707269: self = .pri
+    case 0x6b70, 0x70726b: self = .prk
+    case 0x7074, 0x707274: self = .prt
+    case 0x7079, 0x707279: self = .pry
+    case 0x7073, 0x707365: self = .pse
+    case 0x7066, 0x707966: self = .pyf
+    case 0x7161, 0x716174: self = .qat
+    case 0x7265, 0x726575: self = .reu
+    case 0x726f, 0x726f75: self = .rou
+    case 0x7275, 0x727573: self = .rus
+    case 0x7277, 0x727761: self = .rwa
+    case 0x7361, 0x736175: self = .sau
+    case 0x7364, 0x73646e: self = .sdn
+    case 0x736e, 0x73656e: self = .sen
+    case 0x7367, 0x736770: self = .sgp
+    case 0x6773, 0x736773: self = .sgs
+    case 0x7368, 0x73686e: self = .shn
+    case 0x736a, 0x736a6d: self = .sjm
+    case 0x7362, 0x736c62: self = .slb
+    case 0x736c, 0x736c65: self = .sle
+    case 0x7376, 0x736c76: self = .slv
+    case 0x736d, 0x736d72: self = .smr
+    case 0x736f, 0x736f6d: self = .som
+    case 0x706d, 0x73706d: self = .spm
+    case 0x7273, 0x737262: self = .srb
+    case 0x7373, 0x737364: self = .ssd
+    case 0x7374, 0x737470: self = .stp
+    case 0x7372, 0x737572: self = .sur
+    case 0x736b, 0x73766b: self = .svk
+    case 0x7369, 0x73766e: self = .svn
+    case 0x7365, 0x737765: self = .swe
+    case 0x737a, 0x73777a: self = .swz
+    case 0x7378, 0x73786d: self = .sxm
+    case 0x7363, 0x737963: self = .syc
+    case 0x7379, 0x737972: self = .syr
+    case 0x7463, 0x746361: self = .tca
+    case 0x7464, 0x746364: self = .tcd
+    case 0x7467, 0x74676f: self = .tgo
+    case 0x7468, 0x746861: self = .tha
+    case 0x746a, 0x746a6b: self = .tjk
+    case 0x746b, 0x746b6c: self = .tkl
+    case 0x746d, 0x746b6d: self = .tkm
+    case 0x746c, 0x746c73: self = .tls
+    case 0x746f, 0x746f6e: self = .ton
+    case 0x7474, 0x74746f: self = .tto
+    case 0x746e, 0x74756e: self = .tun
+    case 0x7472, 0x747572: self = .tur
+    case 0x7476, 0x747576: self = .tuv
+    case 0x7477, 0x74776e: self = .twn
+    case 0x747a, 0x747a61: self = .tza
+    case 0x7567, 0x756761: self = .uga
+    case 0x7561, 0x756b72: self = .ukr
+    case 0x756d, 0x756d69: self = .umi
+    case 0x7579, 0x757279: self = .ury
+    case 0x7573, 0x757361: self = .usa
+    case 0x757a, 0x757a62: self = .uzb
+    case 0x7661, 0x766174: self = .vat
+    case 0x7663, 0x766374: self = .vct
+    case 0x7665, 0x76656e: self = .ven
+    case 0x7667, 0x766762: self = .vgb
+    case 0x7669, 0x766972: self = .vir
+    case 0x766e, 0x766e6d: self = .vnm
+    case 0x7675, 0x767574: self = .vut
+    case 0x7766, 0x776c66: self = .wlf
+    case 0x7773, 0x77736d: self = .wsm
+    case 0x7965, 0x79656d: self = .yem
+    case 0x7a61, 0x7a6166: self = .zaf
+    case 0x7a6d, 0x7a6d62: self = .zmb
+    case 0x7a77, 0x7a7765: self = .zwe
     default: return nil
     }
   }
@@ -1284,510 +1284,510 @@ public enum Country: UInt16, Identifiable, CaseIterable, Codable {
 
   public var alpha2Code: String {
     switch self {
-    case .abw: return "AW"
-    case .afg: return "AF"
-    case .ago: return "AO"
-    case .aia: return "AI"
-    case .ala: return "AX"
-    case .alb: return "AL"
-    case .and: return "AD"
-    case .are: return "AE"
-    case .arg: return "AR"
-    case .arm: return "AM"
-    case .asm: return "AS"
-    case .ata: return "AQ"
-    case .atf: return "TF"
-    case .atg: return "AG"
-    case .aus: return "AU"
-    case .aut: return "AT"
-    case .aze: return "AZ"
-    case .bdi: return "BI"
-    case .bel: return "BE"
-    case .ben: return "BJ"
-    case .bes: return "BQ"
-    case .bfa: return "BF"
-    case .bgd: return "BD"
-    case .bgr: return "BG"
-    case .bhr: return "BH"
-    case .bhs: return "BS"
-    case .bih: return "BA"
-    case .blm: return "BL"
-    case .blr: return "BY"
-    case .blz: return "BZ"
-    case .bmu: return "BM"
-    case .bol: return "BO"
-    case .bra: return "BR"
-    case .brb: return "BB"
-    case .brn: return "BN"
-    case .btn: return "BT"
-    case .bvt: return "BV"
-    case .bwa: return "BW"
-    case .caf: return "CF"
-    case .can: return "CA"
-    case .cck: return "CC"
-    case .che: return "CH"
-    case .chl: return "CL"
-    case .chn: return "CN"
-    case .civ: return "CI"
-    case .cmr: return "CM"
-    case .cod: return "CD"
-    case .cog: return "CG"
-    case .cok: return "CK"
-    case .col: return "CO"
-    case .com: return "KM"
-    case .cpv: return "CV"
-    case .cri: return "CR"
-    case .cub: return "CU"
-    case .cuw: return "CW"
-    case .cxr: return "CX"
-    case .cym: return "KY"
-    case .cyp: return "CY"
-    case .cze: return "CZ"
-    case .deu: return "DE"
-    case .dji: return "DJ"
-    case .dma: return "DM"
-    case .dnk: return "DK"
-    case .dom: return "DO"
-    case .dza: return "DZ"
-    case .ecu: return "EC"
-    case .egy: return "EG"
-    case .eri: return "ER"
-    case .esh: return "EH"
-    case .esp: return "ES"
-    case .est: return "EE"
-    case .eth: return "ET"
-    case .fin: return "FI"
-    case .fji: return "FJ"
-    case .flk: return "FK"
-    case .fra: return "FR"
-    case .fro: return "FO"
-    case .fsm: return "FM"
-    case .gab: return "GA"
-    case .gbr: return "GB"
-    case .geo: return "GE"
-    case .ggy: return "GG"
-    case .gha: return "GH"
-    case .gib: return "GI"
-    case .gin: return "GN"
-    case .glp: return "GP"
-    case .gmb: return "GM"
-    case .gnb: return "GW"
-    case .gnq: return "GQ"
-    case .grc: return "GR"
-    case .grd: return "GD"
-    case .grl: return "GL"
-    case .gtm: return "GT"
-    case .guf: return "GF"
-    case .gum: return "GU"
-    case .guy: return "GY"
-    case .hkg: return "HK"
-    case .hmd: return "HM"
-    case .hnd: return "HN"
-    case .hrv: return "HR"
-    case .hti: return "HT"
-    case .hun: return "HU"
-    case .idn: return "ID"
-    case .imn: return "IM"
-    case .ind: return "IN"
-    case .iot: return "IO"
-    case .irl: return "IE"
-    case .irn: return "IR"
-    case .irq: return "IQ"
-    case .isl: return "IS"
-    case .isr: return "IL"
-    case .ita: return "IT"
-    case .jam: return "JM"
-    case .jey: return "JE"
-    case .jor: return "JO"
-    case .jpn: return "JP"
-    case .kaz: return "KZ"
-    case .ken: return "KE"
-    case .kgz: return "KG"
-    case .khm: return "KH"
-    case .kir: return "KI"
-    case .kna: return "KN"
-    case .kor: return "KR"
-    case .kwt: return "KW"
-    case .lao: return "LA"
-    case .lbn: return "LB"
-    case .lbr: return "LR"
-    case .lby: return "LY"
-    case .lca: return "LC"
-    case .lie: return "LI"
-    case .lka: return "LK"
-    case .lso: return "LS"
-    case .ltu: return "LT"
-    case .lux: return "LU"
-    case .lva: return "LV"
-    case .mac: return "MO"
-    case .maf: return "MF"
-    case .mar: return "MA"
-    case .mco: return "MC"
-    case .mda: return "MD"
-    case .mdg: return "MG"
-    case .mdv: return "MV"
-    case .mex: return "MX"
-    case .mhl: return "MH"
-    case .mkd: return "MK"
-    case .mli: return "ML"
-    case .mlt: return "MT"
-    case .mmr: return "MM"
-    case .mne: return "ME"
-    case .mng: return "MN"
-    case .mnp: return "MP"
-    case .moz: return "MZ"
-    case .mrt: return "MR"
-    case .msr: return "MS"
-    case .mtq: return "MQ"
-    case .mus: return "MU"
-    case .mwi: return "MW"
-    case .mys: return "MY"
-    case .myt: return "YT"
-    case .nam: return "NA"
-    case .ncl: return "NC"
-    case .ner: return "NE"
-    case .nfk: return "NF"
-    case .nga: return "NG"
-    case .nic: return "NI"
-    case .niu: return "NU"
-    case .nld: return "NL"
-    case .nor: return "NO"
-    case .npl: return "NP"
-    case .nru: return "NR"
-    case .nzl: return "NZ"
-    case .omn: return "OM"
-    case .pak: return "PK"
-    case .pan: return "PA"
-    case .pcn: return "PN"
-    case .per: return "PE"
-    case .phl: return "PH"
-    case .plw: return "PW"
-    case .png: return "PG"
-    case .pol: return "PL"
-    case .pri: return "PR"
-    case .prk: return "KP"
-    case .prt: return "PT"
-    case .pry: return "PY"
-    case .pse: return "PS"
-    case .pyf: return "PF"
-    case .qat: return "QA"
-    case .reu: return "RE"
-    case .rou: return "RO"
-    case .rus: return "RU"
-    case .rwa: return "RW"
-    case .sau: return "SA"
-    case .sdn: return "SD"
-    case .sen: return "SN"
-    case .sgp: return "SG"
-    case .sgs: return "GS"
-    case .shn: return "SH"
-    case .sjm: return "SJ"
-    case .slb: return "SB"
-    case .sle: return "SL"
-    case .slv: return "SV"
-    case .smr: return "SM"
-    case .som: return "SO"
-    case .spm: return "PM"
-    case .srb: return "RS"
-    case .ssd: return "SS"
-    case .stp: return "ST"
-    case .sur: return "SR"
-    case .svk: return "SK"
-    case .svn: return "SI"
-    case .swe: return "SE"
-    case .swz: return "SZ"
-    case .sxm: return "SX"
-    case .syc: return "SC"
-    case .syr: return "SY"
-    case .tca: return "TC"
-    case .tcd: return "TD"
-    case .tgo: return "TG"
-    case .tha: return "TH"
-    case .tjk: return "TJ"
-    case .tkl: return "TK"
-    case .tkm: return "TM"
-    case .tls: return "TL"
-    case .ton: return "TO"
-    case .tto: return "TT"
-    case .tun: return "TN"
-    case .tur: return "TR"
-    case .tuv: return "TV"
-    case .twn: return "TW"
-    case .tza: return "TZ"
-    case .uga: return "UG"
-    case .ukr: return "UA"
-    case .umi: return "UM"
-    case .ury: return "UY"
-    case .usa: return "US"
-    case .uzb: return "UZ"
-    case .vat: return "VA"
-    case .vct: return "VC"
-    case .ven: return "VE"
-    case .vgb: return "VG"
-    case .vir: return "VI"
-    case .vnm: return "VN"
-    case .vut: return "VU"
-    case .wlf: return "WF"
-    case .wsm: return "WS"
-    case .yem: return "YE"
-    case .zaf: return "ZA"
-    case .zmb: return "ZM"
-    case .zwe: return "ZW"
+    case .abw: return "aw"
+    case .afg: return "af"
+    case .ago: return "ao"
+    case .aia: return "ai"
+    case .ala: return "ax"
+    case .alb: return "al"
+    case .and: return "ad"
+    case .are: return "ae"
+    case .arg: return "ar"
+    case .arm: return "am"
+    case .asm: return "as"
+    case .ata: return "aq"
+    case .atf: return "tf"
+    case .atg: return "ag"
+    case .aus: return "au"
+    case .aut: return "at"
+    case .aze: return "az"
+    case .bdi: return "bi"
+    case .bel: return "be"
+    case .ben: return "bj"
+    case .bes: return "bq"
+    case .bfa: return "bf"
+    case .bgd: return "bd"
+    case .bgr: return "bg"
+    case .bhr: return "bh"
+    case .bhs: return "bs"
+    case .bih: return "ba"
+    case .blm: return "bl"
+    case .blr: return "by"
+    case .blz: return "bz"
+    case .bmu: return "bm"
+    case .bol: return "bo"
+    case .bra: return "br"
+    case .brb: return "bb"
+    case .brn: return "bn"
+    case .btn: return "bt"
+    case .bvt: return "bv"
+    case .bwa: return "bw"
+    case .caf: return "cf"
+    case .can: return "ca"
+    case .cck: return "cc"
+    case .che: return "ch"
+    case .chl: return "cl"
+    case .chn: return "cn"
+    case .civ: return "ci"
+    case .cmr: return "cm"
+    case .cod: return "cd"
+    case .cog: return "cg"
+    case .cok: return "ck"
+    case .col: return "co"
+    case .com: return "km"
+    case .cpv: return "cv"
+    case .cri: return "cr"
+    case .cub: return "cu"
+    case .cuw: return "cw"
+    case .cxr: return "cx"
+    case .cym: return "ky"
+    case .cyp: return "cy"
+    case .cze: return "cz"
+    case .deu: return "de"
+    case .dji: return "dj"
+    case .dma: return "dm"
+    case .dnk: return "dk"
+    case .dom: return "do"
+    case .dza: return "dz"
+    case .ecu: return "ec"
+    case .egy: return "eg"
+    case .eri: return "er"
+    case .esh: return "eh"
+    case .esp: return "es"
+    case .est: return "ee"
+    case .eth: return "et"
+    case .fin: return "fi"
+    case .fji: return "fj"
+    case .flk: return "fk"
+    case .fra: return "fr"
+    case .fro: return "fo"
+    case .fsm: return "fm"
+    case .gab: return "ga"
+    case .gbr: return "gb"
+    case .geo: return "ge"
+    case .ggy: return "gg"
+    case .gha: return "gh"
+    case .gib: return "gi"
+    case .gin: return "gn"
+    case .glp: return "gp"
+    case .gmb: return "gm"
+    case .gnb: return "gw"
+    case .gnq: return "gq"
+    case .grc: return "gr"
+    case .grd: return "gd"
+    case .grl: return "gl"
+    case .gtm: return "gt"
+    case .guf: return "gf"
+    case .gum: return "gu"
+    case .guy: return "gy"
+    case .hkg: return "hk"
+    case .hmd: return "hm"
+    case .hnd: return "hn"
+    case .hrv: return "hr"
+    case .hti: return "ht"
+    case .hun: return "hu"
+    case .idn: return "id"
+    case .imn: return "im"
+    case .ind: return "in"
+    case .iot: return "io"
+    case .irl: return "ie"
+    case .irn: return "ir"
+    case .irq: return "iq"
+    case .isl: return "is"
+    case .isr: return "il"
+    case .ita: return "it"
+    case .jam: return "jm"
+    case .jey: return "je"
+    case .jor: return "jo"
+    case .jpn: return "jp"
+    case .kaz: return "kz"
+    case .ken: return "ke"
+    case .kgz: return "kg"
+    case .khm: return "kh"
+    case .kir: return "ki"
+    case .kna: return "kn"
+    case .kor: return "kr"
+    case .kwt: return "kw"
+    case .lao: return "la"
+    case .lbn: return "lb"
+    case .lbr: return "lr"
+    case .lby: return "ly"
+    case .lca: return "lc"
+    case .lie: return "li"
+    case .lka: return "lk"
+    case .lso: return "ls"
+    case .ltu: return "lt"
+    case .lux: return "lu"
+    case .lva: return "lv"
+    case .mac: return "mo"
+    case .maf: return "mf"
+    case .mar: return "ma"
+    case .mco: return "mc"
+    case .mda: return "md"
+    case .mdg: return "mg"
+    case .mdv: return "mv"
+    case .mex: return "mx"
+    case .mhl: return "mh"
+    case .mkd: return "mk"
+    case .mli: return "ml"
+    case .mlt: return "mt"
+    case .mmr: return "mm"
+    case .mne: return "me"
+    case .mng: return "mn"
+    case .mnp: return "mp"
+    case .moz: return "mz"
+    case .mrt: return "mr"
+    case .msr: return "ms"
+    case .mtq: return "mq"
+    case .mus: return "mu"
+    case .mwi: return "mw"
+    case .mys: return "my"
+    case .myt: return "yt"
+    case .nam: return "na"
+    case .ncl: return "nc"
+    case .ner: return "ne"
+    case .nfk: return "nf"
+    case .nga: return "ng"
+    case .nic: return "ni"
+    case .niu: return "nu"
+    case .nld: return "nl"
+    case .nor: return "no"
+    case .npl: return "np"
+    case .nru: return "nr"
+    case .nzl: return "nz"
+    case .omn: return "om"
+    case .pak: return "pk"
+    case .pan: return "pa"
+    case .pcn: return "pn"
+    case .per: return "pe"
+    case .phl: return "ph"
+    case .plw: return "pw"
+    case .png: return "pg"
+    case .pol: return "pl"
+    case .pri: return "pr"
+    case .prk: return "kp"
+    case .prt: return "pt"
+    case .pry: return "py"
+    case .pse: return "ps"
+    case .pyf: return "pf"
+    case .qat: return "qa"
+    case .reu: return "re"
+    case .rou: return "ro"
+    case .rus: return "ru"
+    case .rwa: return "rw"
+    case .sau: return "sa"
+    case .sdn: return "sd"
+    case .sen: return "sn"
+    case .sgp: return "sg"
+    case .sgs: return "gs"
+    case .shn: return "sh"
+    case .sjm: return "sj"
+    case .slb: return "sb"
+    case .sle: return "sl"
+    case .slv: return "sv"
+    case .smr: return "sm"
+    case .som: return "so"
+    case .spm: return "pm"
+    case .srb: return "rs"
+    case .ssd: return "ss"
+    case .stp: return "st"
+    case .sur: return "sr"
+    case .svk: return "sk"
+    case .svn: return "si"
+    case .swe: return "se"
+    case .swz: return "sz"
+    case .sxm: return "sx"
+    case .syc: return "sc"
+    case .syr: return "sy"
+    case .tca: return "tc"
+    case .tcd: return "td"
+    case .tgo: return "tg"
+    case .tha: return "th"
+    case .tjk: return "tj"
+    case .tkl: return "tk"
+    case .tkm: return "tm"
+    case .tls: return "tl"
+    case .ton: return "to"
+    case .tto: return "tt"
+    case .tun: return "tn"
+    case .tur: return "tr"
+    case .tuv: return "tv"
+    case .twn: return "tw"
+    case .tza: return "tz"
+    case .uga: return "ug"
+    case .ukr: return "ua"
+    case .umi: return "um"
+    case .ury: return "uy"
+    case .usa: return "us"
+    case .uzb: return "uz"
+    case .vat: return "va"
+    case .vct: return "vc"
+    case .ven: return "ve"
+    case .vgb: return "vg"
+    case .vir: return "vi"
+    case .vnm: return "vn"
+    case .vut: return "vu"
+    case .wlf: return "wf"
+    case .wsm: return "ws"
+    case .yem: return "ye"
+    case .zaf: return "za"
+    case .zmb: return "zm"
+    case .zwe: return "zw"
 
     }
   }
 
   public var alpha3Code: String {
     switch self {
-    case .abw: return "ABW"
-    case .afg: return "AFG"
-    case .ago: return "AGO"
-    case .aia: return "AIA"
-    case .ala: return "ALA"
-    case .alb: return "ALB"
-    case .and: return "AND"
-    case .are: return "ARE"
-    case .arg: return "ARG"
-    case .arm: return "ARM"
-    case .asm: return "ASM"
-    case .ata: return "ATA"
-    case .atf: return "ATF"
-    case .atg: return "ATG"
-    case .aus: return "AUS"
-    case .aut: return "AUT"
-    case .aze: return "AZE"
-    case .bdi: return "BDI"
-    case .bel: return "BEL"
-    case .ben: return "BEN"
-    case .bes: return "BES"
-    case .bfa: return "BFA"
-    case .bgd: return "BGD"
-    case .bgr: return "BGR"
-    case .bhr: return "BHR"
-    case .bhs: return "BHS"
-    case .bih: return "BIH"
-    case .blm: return "BLM"
-    case .blr: return "BLR"
-    case .blz: return "BLZ"
-    case .bmu: return "BMU"
-    case .bol: return "BOL"
-    case .bra: return "BRA"
-    case .brb: return "BRB"
-    case .brn: return "BRN"
-    case .btn: return "BTN"
-    case .bvt: return "BVT"
-    case .bwa: return "BWA"
-    case .caf: return "CAF"
-    case .can: return "CAN"
-    case .cck: return "CCK"
-    case .che: return "CHE"
-    case .chl: return "CHL"
-    case .chn: return "CHN"
-    case .civ: return "CIV"
-    case .cmr: return "CMR"
-    case .cod: return "COD"
-    case .cog: return "COG"
-    case .cok: return "COK"
-    case .col: return "COL"
-    case .com: return "COM"
-    case .cpv: return "CPV"
-    case .cri: return "CRI"
-    case .cub: return "CUB"
-    case .cuw: return "CUW"
-    case .cxr: return "CXR"
-    case .cym: return "CYM"
-    case .cyp: return "CYP"
-    case .cze: return "CZE"
-    case .deu: return "DEU"
-    case .dji: return "DJI"
-    case .dma: return "DMA"
-    case .dnk: return "DNK"
-    case .dom: return "DOM"
-    case .dza: return "DZA"
-    case .ecu: return "ECU"
-    case .egy: return "EGY"
-    case .eri: return "ERI"
-    case .esh: return "ESH"
-    case .esp: return "ESP"
-    case .est: return "EST"
-    case .eth: return "ETH"
-    case .fin: return "FIN"
-    case .fji: return "FJI"
-    case .flk: return "FLK"
-    case .fra: return "FRA"
-    case .fro: return "FRO"
-    case .fsm: return "FSM"
-    case .gab: return "GAB"
-    case .gbr: return "GBR"
-    case .geo: return "GEO"
-    case .ggy: return "GGY"
-    case .gha: return "GHA"
-    case .gib: return "GIB"
-    case .gin: return "GIN"
-    case .glp: return "GLP"
-    case .gmb: return "GMB"
-    case .gnb: return "GNB"
-    case .gnq: return "GNQ"
-    case .grc: return "GRC"
-    case .grd: return "GRD"
-    case .grl: return "GRL"
-    case .gtm: return "GTM"
-    case .guf: return "GUF"
-    case .gum: return "GUM"
-    case .guy: return "GUY"
-    case .hkg: return "HKG"
-    case .hmd: return "HMD"
-    case .hnd: return "HND"
-    case .hrv: return "HRV"
-    case .hti: return "HTI"
-    case .hun: return "HUN"
-    case .idn: return "IDN"
-    case .imn: return "IMN"
-    case .ind: return "IND"
-    case .iot: return "IOT"
-    case .irl: return "IRL"
-    case .irn: return "IRN"
-    case .irq: return "IRQ"
-    case .isl: return "ISL"
-    case .isr: return "ISR"
-    case .ita: return "ITA"
-    case .jam: return "JAM"
-    case .jey: return "JEY"
-    case .jor: return "JOR"
-    case .jpn: return "JPN"
-    case .kaz: return "KAZ"
-    case .ken: return "KEN"
-    case .kgz: return "KGZ"
-    case .khm: return "KHM"
-    case .kir: return "KIR"
-    case .kna: return "KNA"
-    case .kor: return "KOR"
-    case .kwt: return "KWT"
-    case .lao: return "LAO"
-    case .lbn: return "LBN"
-    case .lbr: return "LBR"
-    case .lby: return "LBY"
-    case .lca: return "LCA"
-    case .lie: return "LIE"
-    case .lka: return "LKA"
-    case .lso: return "LSO"
-    case .ltu: return "LTU"
-    case .lux: return "LUX"
-    case .lva: return "LVA"
-    case .mac: return "MAC"
-    case .maf: return "MAF"
-    case .mar: return "MAR"
-    case .mco: return "MCO"
-    case .mda: return "MDA"
-    case .mdg: return "MDG"
-    case .mdv: return "MDV"
-    case .mex: return "MEX"
-    case .mhl: return "MHL"
-    case .mkd: return "MKD"
-    case .mli: return "MLI"
-    case .mlt: return "MLT"
-    case .mmr: return "MMR"
-    case .mne: return "MNE"
-    case .mng: return "MNG"
-    case .mnp: return "MNP"
-    case .moz: return "MOZ"
-    case .mrt: return "MRT"
-    case .msr: return "MSR"
-    case .mtq: return "MTQ"
-    case .mus: return "MUS"
-    case .mwi: return "MWI"
-    case .mys: return "MYS"
-    case .myt: return "MYT"
-    case .nam: return "NAM"
-    case .ncl: return "NCL"
-    case .ner: return "NER"
-    case .nfk: return "NFK"
-    case .nga: return "NGA"
-    case .nic: return "NIC"
-    case .niu: return "NIU"
-    case .nld: return "NLD"
-    case .nor: return "NOR"
-    case .npl: return "NPL"
-    case .nru: return "NRU"
-    case .nzl: return "NZL"
-    case .omn: return "OMN"
-    case .pak: return "PAK"
-    case .pan: return "PAN"
-    case .pcn: return "PCN"
-    case .per: return "PER"
-    case .phl: return "PHL"
-    case .plw: return "PLW"
-    case .png: return "PNG"
-    case .pol: return "POL"
-    case .pri: return "PRI"
-    case .prk: return "PRK"
-    case .prt: return "PRT"
-    case .pry: return "PRY"
-    case .pse: return "PSE"
-    case .pyf: return "PYF"
-    case .qat: return "QAT"
-    case .reu: return "REU"
-    case .rou: return "ROU"
-    case .rus: return "RUS"
-    case .rwa: return "RWA"
-    case .sau: return "SAU"
-    case .sdn: return "SDN"
-    case .sen: return "SEN"
-    case .sgp: return "SGP"
-    case .sgs: return "SGS"
-    case .shn: return "SHN"
-    case .sjm: return "SJM"
-    case .slb: return "SLB"
-    case .sle: return "SLE"
-    case .slv: return "SLV"
-    case .smr: return "SMR"
-    case .som: return "SOM"
-    case .spm: return "SPM"
-    case .srb: return "SRB"
-    case .ssd: return "SSD"
-    case .stp: return "STP"
-    case .sur: return "SUR"
-    case .svk: return "SVK"
-    case .svn: return "SVN"
-    case .swe: return "SWE"
-    case .swz: return "SWZ"
-    case .sxm: return "SXM"
-    case .syc: return "SYC"
-    case .syr: return "SYR"
-    case .tca: return "TCA"
-    case .tcd: return "TCD"
-    case .tgo: return "TGO"
-    case .tha: return "THA"
-    case .tjk: return "TJK"
-    case .tkl: return "TKL"
-    case .tkm: return "TKM"
-    case .tls: return "TLS"
-    case .ton: return "TON"
-    case .tto: return "TTO"
-    case .tun: return "TUN"
-    case .tur: return "TUR"
-    case .tuv: return "TUV"
-    case .twn: return "TWN"
-    case .tza: return "TZA"
-    case .uga: return "UGA"
-    case .ukr: return "UKR"
-    case .umi: return "UMI"
-    case .ury: return "URY"
-    case .usa: return "USA"
-    case .uzb: return "UZB"
-    case .vat: return "VAT"
-    case .vct: return "VCT"
-    case .ven: return "VEN"
-    case .vgb: return "VGB"
-    case .vir: return "VIR"
-    case .vnm: return "VNM"
-    case .vut: return "VUT"
-    case .wlf: return "WLF"
-    case .wsm: return "WSM"
-    case .yem: return "YEM"
-    case .zaf: return "ZAF"
-    case .zmb: return "ZMB"
-    case .zwe: return "ZWE"
+    case .abw: return "abw"
+    case .afg: return "afg"
+    case .ago: return "ago"
+    case .aia: return "aia"
+    case .ala: return "ala"
+    case .alb: return "alb"
+    case .and: return "and"
+    case .are: return "are"
+    case .arg: return "arg"
+    case .arm: return "arm"
+    case .asm: return "asm"
+    case .ata: return "ata"
+    case .atf: return "atf"
+    case .atg: return "atg"
+    case .aus: return "aus"
+    case .aut: return "aut"
+    case .aze: return "aze"
+    case .bdi: return "bdi"
+    case .bel: return "bel"
+    case .ben: return "ben"
+    case .bes: return "bes"
+    case .bfa: return "bfa"
+    case .bgd: return "bgd"
+    case .bgr: return "bgr"
+    case .bhr: return "bhr"
+    case .bhs: return "bhs"
+    case .bih: return "bih"
+    case .blm: return "blm"
+    case .blr: return "blr"
+    case .blz: return "blz"
+    case .bmu: return "bmu"
+    case .bol: return "bol"
+    case .bra: return "bra"
+    case .brb: return "brb"
+    case .brn: return "brn"
+    case .btn: return "btn"
+    case .bvt: return "bvt"
+    case .bwa: return "bwa"
+    case .caf: return "caf"
+    case .can: return "can"
+    case .cck: return "cck"
+    case .che: return "che"
+    case .chl: return "chl"
+    case .chn: return "chn"
+    case .civ: return "civ"
+    case .cmr: return "cmr"
+    case .cod: return "cod"
+    case .cog: return "cog"
+    case .cok: return "cok"
+    case .col: return "col"
+    case .com: return "com"
+    case .cpv: return "cpv"
+    case .cri: return "cri"
+    case .cub: return "cub"
+    case .cuw: return "cuw"
+    case .cxr: return "cxr"
+    case .cym: return "cym"
+    case .cyp: return "cyp"
+    case .cze: return "cze"
+    case .deu: return "deu"
+    case .dji: return "dji"
+    case .dma: return "dma"
+    case .dnk: return "dnk"
+    case .dom: return "dom"
+    case .dza: return "dza"
+    case .ecu: return "ecu"
+    case .egy: return "egy"
+    case .eri: return "eri"
+    case .esh: return "esh"
+    case .esp: return "esp"
+    case .est: return "est"
+    case .eth: return "eth"
+    case .fin: return "fin"
+    case .fji: return "fji"
+    case .flk: return "flk"
+    case .fra: return "fra"
+    case .fro: return "fro"
+    case .fsm: return "fsm"
+    case .gab: return "gab"
+    case .gbr: return "gbr"
+    case .geo: return "geo"
+    case .ggy: return "ggy"
+    case .gha: return "gha"
+    case .gib: return "gib"
+    case .gin: return "gin"
+    case .glp: return "glp"
+    case .gmb: return "gmb"
+    case .gnb: return "gnb"
+    case .gnq: return "gnq"
+    case .grc: return "grc"
+    case .grd: return "grd"
+    case .grl: return "grl"
+    case .gtm: return "gtm"
+    case .guf: return "guf"
+    case .gum: return "gum"
+    case .guy: return "guy"
+    case .hkg: return "hkg"
+    case .hmd: return "hmd"
+    case .hnd: return "hnd"
+    case .hrv: return "hrv"
+    case .hti: return "hti"
+    case .hun: return "hun"
+    case .idn: return "idn"
+    case .imn: return "imn"
+    case .ind: return "ind"
+    case .iot: return "iot"
+    case .irl: return "irl"
+    case .irn: return "irn"
+    case .irq: return "irq"
+    case .isl: return "isl"
+    case .isr: return "isr"
+    case .ita: return "ita"
+    case .jam: return "jam"
+    case .jey: return "jey"
+    case .jor: return "jor"
+    case .jpn: return "jpn"
+    case .kaz: return "kaz"
+    case .ken: return "ken"
+    case .kgz: return "kgz"
+    case .khm: return "khm"
+    case .kir: return "kir"
+    case .kna: return "kna"
+    case .kor: return "kor"
+    case .kwt: return "kwt"
+    case .lao: return "lao"
+    case .lbn: return "lbn"
+    case .lbr: return "lbr"
+    case .lby: return "lby"
+    case .lca: return "lca"
+    case .lie: return "lie"
+    case .lka: return "lka"
+    case .lso: return "lso"
+    case .ltu: return "ltu"
+    case .lux: return "lux"
+    case .lva: return "lva"
+    case .mac: return "mac"
+    case .maf: return "maf"
+    case .mar: return "mar"
+    case .mco: return "mco"
+    case .mda: return "mda"
+    case .mdg: return "mdg"
+    case .mdv: return "mdv"
+    case .mex: return "mex"
+    case .mhl: return "mhl"
+    case .mkd: return "mkd"
+    case .mli: return "mli"
+    case .mlt: return "mlt"
+    case .mmr: return "mmr"
+    case .mne: return "mne"
+    case .mng: return "mng"
+    case .mnp: return "mnp"
+    case .moz: return "moz"
+    case .mrt: return "mrt"
+    case .msr: return "msr"
+    case .mtq: return "mtq"
+    case .mus: return "mus"
+    case .mwi: return "mwi"
+    case .mys: return "mys"
+    case .myt: return "myt"
+    case .nam: return "nam"
+    case .ncl: return "ncl"
+    case .ner: return "ner"
+    case .nfk: return "nfk"
+    case .nga: return "nga"
+    case .nic: return "nic"
+    case .niu: return "niu"
+    case .nld: return "nld"
+    case .nor: return "nor"
+    case .npl: return "npl"
+    case .nru: return "nru"
+    case .nzl: return "nzl"
+    case .omn: return "omn"
+    case .pak: return "pak"
+    case .pan: return "pan"
+    case .pcn: return "pcn"
+    case .per: return "per"
+    case .phl: return "phl"
+    case .plw: return "plw"
+    case .png: return "png"
+    case .pol: return "pol"
+    case .pri: return "pri"
+    case .prk: return "prk"
+    case .prt: return "prt"
+    case .pry: return "pry"
+    case .pse: return "pse"
+    case .pyf: return "pyf"
+    case .qat: return "qat"
+    case .reu: return "reu"
+    case .rou: return "rou"
+    case .rus: return "rus"
+    case .rwa: return "rwa"
+    case .sau: return "sau"
+    case .sdn: return "sdn"
+    case .sen: return "sen"
+    case .sgp: return "sgp"
+    case .sgs: return "sgs"
+    case .shn: return "shn"
+    case .sjm: return "sjm"
+    case .slb: return "slb"
+    case .sle: return "sle"
+    case .slv: return "slv"
+    case .smr: return "smr"
+    case .som: return "som"
+    case .spm: return "spm"
+    case .srb: return "srb"
+    case .ssd: return "ssd"
+    case .stp: return "stp"
+    case .sur: return "sur"
+    case .svk: return "svk"
+    case .svn: return "svn"
+    case .swe: return "swe"
+    case .swz: return "swz"
+    case .sxm: return "sxm"
+    case .syc: return "syc"
+    case .syr: return "syr"
+    case .tca: return "tca"
+    case .tcd: return "tcd"
+    case .tgo: return "tgo"
+    case .tha: return "tha"
+    case .tjk: return "tjk"
+    case .tkl: return "tkl"
+    case .tkm: return "tkm"
+    case .tls: return "tls"
+    case .ton: return "ton"
+    case .tto: return "tto"
+    case .tun: return "tun"
+    case .tur: return "tur"
+    case .tuv: return "tuv"
+    case .twn: return "twn"
+    case .tza: return "tza"
+    case .uga: return "uga"
+    case .ukr: return "ukr"
+    case .umi: return "umi"
+    case .ury: return "ury"
+    case .usa: return "usa"
+    case .uzb: return "uzb"
+    case .vat: return "vat"
+    case .vct: return "vct"
+    case .ven: return "ven"
+    case .vgb: return "vgb"
+    case .vir: return "vir"
+    case .vnm: return "vnm"
+    case .vut: return "vut"
+    case .wlf: return "wlf"
+    case .wsm: return "wsm"
+    case .yem: return "yem"
+    case .zaf: return "zaf"
+    case .zmb: return "zmb"
+    case .zwe: return "zwe"
 
     }
   }
