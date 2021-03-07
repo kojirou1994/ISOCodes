@@ -6,8 +6,8 @@
         "repositoryURL": "git@github.com:kojirou1994/Executable.git",
         "state": {
           "branch": null,
-          "revision": "49a9063e0005209cbbeea661be0afa75ef005b3f",
-          "version": "0.0.1"
+          "revision": "0042819ccdbcf114534f9352627bcce5967505f4",
+          "version": "0.4.1"
         }
       },
       {
@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/tid-kijyun/Kanna.git",
         "state": {
           "branch": null,
-          "revision": "9b8f73f8c8e145dc496565bbf878a709793e7ba3",
-          "version": "5.0.0"
+          "revision": "c657fb9f5827ef138068215c76ad0bb62bbc92da",
+          "version": "5.2.4"
         }
       },
       {
@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/kojirou1994/Kwift.git",
         "state": {
           "branch": null,
-          "revision": "9b4e76a4fa594b555bd033555ec4273957a893b7",
-          "version": "0.5.4"
+          "revision": "25c5d459f89e19d209add3e28dd4d479a9540482",
+          "version": "0.8.6"
         }
       },
       {
@@ -33,8 +33,8 @@
         "repositoryURL": "https://github.com/apple/swift-tools-support-core.git",
         "state": {
           "branch": null,
-          "revision": "693aba4c4c9dcc4767cc853a0dd38bf90ad8c258",
-          "version": "0.0.1"
+          "revision": "2954e55faee5bfee928e844bb09e97fcfa8d24af",
+          "version": "0.2.0"
         }
       }
     ]
